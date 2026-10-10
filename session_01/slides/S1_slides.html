@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>S1 — Pourquoi toutes les expériences ne se valent-elles pas ?</title>
+<title>S1 — Des essais au modèle</title>
 <link rel="stylesheet" href="../../commun/web/vendor/katex/katex.min.css">
 <link rel="stylesheet" href="../../commun/web/deck/deck.css">
 <link rel="stylesheet" href="../../commun/web/css/plots.css">
@@ -19,436 +19,65 @@
 </head>
 <body>
 <main class="deck">
+<section class="slide"><div class="kicker">Séance 1 · 4 heures</div><h2>Des essais au modèle</h2><p>Choisir des réglages, comparer des mesures, construire une règle pour prévoir.</p><div class="timeline"><div><b>0–60 min</b>Tableau, codage, prévision</div><div><b>60–105 min</b>Deux facteurs et interaction</div><div><b>105–120 min</b>Pause</div><div><b>120–240 min</b>Séparer les effets, construire X, comparer</div></div><p>Une première idée, un exemple fait ensemble, un essai en binôme, puis une mise en commun.</p></section>
 
-<!-- 1 ============================================================ -->
-<section class="slide cover">
-  <div class="kicker" style="color:#f3b58c">Plans d'expériences · Séance 1 / 4 · M2 Instrumentation</div>
-  <h1>Pourquoi toutes les expériences<br>ne se valent-elles pas ?</h1>
-  <p style="font-size:30px;max-width:1200px">La séance est organisée autour de cinq controverses. Pour chacune, vous ferez d'abord une prédiction, puis vous défendrez une position en équipe avant que les résultats ne soient révélés.</p>
-  <div class="timeline" style="margin-top:30px">
-    <div style="background:rgba(255,255,255,.12);color:#fff"><b style="color:#f3b58c">A</b>Un facteur à la fois ?</div>
-    <div style="background:rgba(255,255,255,.12);color:#fff"><b style="color:#f3b58c">B</b>Tout varier ensemble ?</div>
-    <div style="background:rgba(255,255,255,.12);color:#fff"><b style="color:#f3b58c">C</b>Plus d'essais, plus d'info ?</div>
-    <div style="background:rgba(255,255,255,.12);color:#fff"><b style="color:#f3b58c">D</b>Deux plans équivalents ?</div>
-    <div style="background:rgba(255,255,255,.12);color:#fff"><b style="color:#f3b58c">Finale</b>Recommander sous contrainte</div>
-  </div>
-  <p class="small" style="margin-top:28px;color:#9fb8cf">Supports : F0 (mathématiques) · F1 (stratégie) · M1 (livret de missions) · laboratoire interactif.</p>
-</section>
+<section class="slide" data-timer="3"><div class="kicker">Mission 0.1 · Tableau · 0–20 min</div><h2>Une ligne raconte un essai</h2><table class="t"><tr><th>Essai</th><th>Température</th><th>Durée</th><th>Rendement mesuré</th></tr><tr><td>1</td><td>40 °C</td><td>1 h</td><td>20 %</td></tr><tr><td>2</td><td>60 °C</td><td>1 h</td><td>34 %</td></tr><tr><td>3</td><td>40 °C</td><td>2 h</td><td>À mesurer</td></tr></table><div class="box " style="margin-top:20px"><p>Décrivez l’essai 2 avec une phrase. Que choisit-on avant l’essai ? Que mesure-t-on après ?</p></div><p class="frag">Une <b>ligne = un essai</b>. Les réglages sont les <b>facteurs</b> ; le rendement est la <b>réponse</b>.</p><p class="small">Exemple fictif indépendant des laboratoires A et B.</p></section>
 
-<!-- 2 ============================================================ -->
-<section class="slide">
-  <div class="kicker">Pour commencer</div>
-  <h2>Une expérience sert à décider</h2>
-  <div class="cols wide-left">
-    <div class="stack">
-      <div class="timeline" style="font-size:26px">
-        <div><b>Expériences</b>que l'on choisit</div><div><b>Information</b>que l'on en tire</div><div><b>Décision</b>que l'on prend</div><div style="background:var(--accent-soft)"><b style="color:var(--accent)">Risque</b>de se tromper</div>
-      </div>
-      <div class="box accent"><p><b>Vote à main levée (30 s, sans discuter) :</b><br>deux plans de <b>4 essais</b> chacun peuvent-ils donner des estimations de précision <b>différente</b> ?</p>
-      <p style="margin-top:10px">Oui · Non · Ça dépend</p></div>
-    </div>
-    <div class="box plain">
-      <h3>« La qualité de l'information dépend de la position des points expérimentaux et non des résultats expérimentaux ni du nombre d'expériences. »</h3>
-      <p class="small">Une affirmation que l'on rencontre souvent. Vrai, faux ou à nuancer ? Nous y reviendrons à la fin.</p>
-    </div>
-  </div>
-</section>
+<section class="slide" data-timer="4"><div class="kicker">Mission 0.1 · Compléter et comparer</div><h2>Quel essai manque ? Quelles lignes comparer ?</h2><ol><li>Ajoutez la ligne à <b>60 °C pendant 2 h</b>.</li><li>Quelles lignes comparent la température <b>à durée constante</b> ?</li><li>Calculez le gain. Pourquoi ne pas comparer directement les essais 2 et 3 ?</li></ol><div class="box frag good" style="margin-top:20px"><p>Essais 1 et 2 : seule la température change.<br>34 − 20 = <b>14 points de rendement</b>.</p></div><p class="frag">Entre 2 et 3, les deux réglages changent : on ne sépare pas leurs contributions.</p></section>
 
-<!-- 3 ============================================================ -->
-<section class="slide">
-  <div class="kicker">Le cas fil rouge</div>
-  <h2>Améliorer le rendement d'une extraction</h2>
-  <div class="cols wide-right">
-    <div class="stack">
-      <p><b>Réponse</b> : rendement d'extraction d'un pesticide (%)</p>
-      <p><b>Facteurs</b> : température \(T\) et durée \(t\)</p>
-      <p><b>Contrainte</b> : 1 essai = ½ journée d'extracteur → <b>4 essais au plus</b></p>
-      <p><b>Répétabilité connue</b> : \(\sigma \approx 1{,}5\) point</p>
-    </div>
-    <div>
-      <table class="t">
-        <tr><th>Facteur</th><th>−1</th><th>+1</th><th>centre</th><th>pas</th></tr>
-        <tr><td>\(x_1\) : \(T\)</td><td>40 °C</td><td>60 °C</td><td>50 °C</td><td>10 °C</td></tr>
-        <tr><td>\(x_2\) : \(t\)</td><td>1 h</td><td>2 h</td><td>1,5 h</td><td>0,5 h</td></tr>
-      </table>
-      <div class="eq-big">\[ x_{ij} = \frac{U_{ij} - U_j^0}{\Delta U_j} \]</div>
-      <p class="small muted">Codage : le domaine devient le carré \([-1;1]^2\). (F1 §2.3)</p>
-    </div>
-  </div>
-</section>
+<section class="slide"><div class="kicker">Mission 0.2 · Codage · 20–40 min</div><h2>Mêmes essais, une autre écriture</h2><table class="t"><tr><th>Niveau</th><th>Température</th><th>Code x₁</th><th>Durée</th><th>Code x₂</th></tr><tr><td>Bas</td><td>40 °C</td><td>−1</td><td>1 h</td><td>−1</td></tr><tr><td>Centre</td><td>50 °C</td><td>0</td><td>1,5 h</td><td>0</td></tr><tr><td>Haut</td><td>60 °C</td><td>+1</td><td>2 h</td><td>+1</td></tr></table><div class="box " style="margin-top:20px"><p>Le code indique la position par rapport au centre.<br><b>−1 n’est pas une température négative.</b></p></div><p>Les réglages physiques et les mesures restent les mêmes.</p></section>
 
-<!-- 4 ============================================================ -->
-<section class="slide" data-timer="3">
-  <div class="kicker">Mission A · prédiction individuelle</div>
-  <div class="question">Avec 4 essais au plus, faut-il modifier un facteur à la fois ?</div>
-  <div class="cols">
-    <div id="ch-a-strategies" class="chart" style="--h:380px"></div>
-    <div class="stack">
-      <div class="box"><p><b>Seul, sans IA, 3 min (M1 p. 3)</b></p><ul class="small"><li>Quels essais, dans quel ordre ?</li><li>Quelle stratégie trouvera les meilleures conditions ?</li><li>Rendement prévu à (60 °C ; 2 h) ? Confiance de 1 à 5.</li></ul></div>
-      <div class="vote"><div><b>Un facteur à la fois</b>3 essais, sur le chemin</div><div><b>Plan factoriel</b>4 essais, aux coins</div></div>
-    </div>
-  </div>
-</section>
+<section class="slide" data-timer="5"><div class="kicker">Mission 0.2 · Pratiquer</div><h2>Du réglage au code, du code au réglage</h2><div class="cols"><div><ol><li>Codez (60 °C ; 1 h).</li><li>Décodez (−1 ; +1).</li><li>Quel code pour 55 °C ?</li><li>Quelle durée pour x₂ = −0,5 ?</li></ol></div><div class="box frag good" style="margin-top:20px"><p>(+1 ; −1)<br><br>(40 °C ; 2 h)<br><br>x₁ = +0,5<br><br>1,25 h</p></div></div></section>
 
-<!-- 5 ============================================================ -->
-<section class="slide" data-timer="10">
-  <div class="kicker">Mission A · préparation puis confrontation</div>
-  <h2>Deux positions défendables</h2>
-  <div class="cols">
-    <div class="role"><h3><span class="tag">Équipes impaires</span> « Prudence »</h3><p class="small">Un facteur à la fois depuis (40 °C ; 1 h). L'ordre et la règle de décision sont à choisir. Lisibilité, économie, adaptation.</p></div>
-    <div class="role b"><h3><span class="tag accent">Équipes paires</span> « Carte »</h3><p class="small">Les 4 combinaisons. Couverture du domaine, et une question : l'effet de \(T\) dépend-il de \(t\) ?</p></div>
-  </div>
-  <div class="timeline" style="margin-top:22px">
-    <div><b>10 min</b>préparer 3 arguments et leurs hypothèses</div>
-    <div><b>10 min</b>confrontation E1–E2, E3–E4… (déroulé M1 p. 2)</div>
-    <div><b>5 min</b>ouverture des enveloppes</div>
-    <div><b>10 min</b>confrontation entre labos A et B, puis inversion des rôles</div>
-  </div>
-  <p class="small muted">Laboratoire A : E1–E4 · Laboratoire B : E5–E8. Les deux laboratoires traitent des échantillons de matrices différentes.</p>
-</section>
+<section class="slide"><div class="kicker">Mission 0.2 · La règle après la pratique</div><h2>Le code mesure une distance au centre</h2><div class="eq">\[x_1=\frac{T-50}{10}\qquad x_2=\frac{t-1{,}5}{0{,}5}\]</div><div class="cols"><div class="box " style="margin-top:20px"><p>Coder 55 °C :<br>(55 − 50) / 10 = <b>0,5</b></p></div><div class="box good" style="margin-top:20px"><p>Revenir aux unités réelles :<br>T = 50 + 10x₁<br>t = 1,5 + 0,5x₂</p></div></div><p class="small">Le code n’a pas d’unité. Le pas est la distance entre le centre et le niveau haut.</p></section>
 
-<!-- 6 ============================================================ -->
-<section class="slide">
-  <div class="kicker">Mission A · informations nouvelles</div>
-  <h2>Les résultats des deux laboratoires</h2>
-  <div class="worlds">
-    <div class="wA"><h3>Laboratoire A · sédiment sableux</h3>
-      <div class="frag"><div id="ch-a-worldA" class="chart" style="--h:400px"></div>
-      <p class="small">« Un facteur à la fois » prédit <b>23 + 14 + 18 = 55</b> en (60 °C ; 2 h)…</p></div>
-      <p class="frag small">… la mesure donne <b>59</b>. L'écart est modéré.</p>
-    </div>
-    <div class="wB"><h3>Laboratoire B · boue de station</h3>
-      <div class="frag"><div id="ch-a-worldB" class="chart" style="--h:400px"></div>
-      <p class="small">« Un facteur à la fois » prédit <b>17 + 26 + 48 = 91</b>…</p></div>
-      <p class="frag small">… la mesure donne <b>35</b>. Le meilleur choix était (40 °C ; 2 h) : <b>65</b>.</p>
-    </div>
-  </div>
-</section>
+<section class="slide" data-timer="3"><div class="kicker">Mission 0.3 · Prévision · 40–60 min</div><h2>Que prévoir entre deux mesures ?</h2><table class="t"><tr><th>Température</th><th>Durée fixée</th><th>Rendement</th></tr><tr><td>40 °C</td><td>1 h</td><td>20 % mesurés</td></tr><tr><td>50 °C</td><td>1 h</td><td>Votre prévision ?</td></tr><tr><td>60 °C</td><td>1 h</td><td>34 % mesurés</td></tr></table><p>Écrivez une valeur, puis votre raisonnement en une phrase ou un dessin.</p><div class="box frag" style="margin-top:20px"><p>20 + 14 / 2 = <b>27 % prévus</b>.<br>Hypothèse : un gain constant par degré entre les deux mesures.</p></div></section>
 
-<!-- 7 ============================================================ -->
-<section class="slide">
-  <div class="kicker">Mission A · formalisation</div>
-  <h2>Dans le laboratoire B, l'ordre des essais décide</h2>
-  <div class="cols">
-    <div><h3 style="color:var(--s2)">\(T\) d'abord → choix final 43</h3><div id="ch-a-pathT" class="chart" style="--h:390px"></div></div>
-    <div class="frag"><h3 style="color:var(--s1)">\(t\) d'abord → choix final 65</h3><div id="ch-a-patht" class="chart" style="--h:390px"></div></div>
-  </div>
-  <p class="frag box plain small">Les deux équipes appliquent la même méthode avec le même nombre d'essais, mais elles aboutissent à <b>deux recommandations différentes</b>. Dans le laboratoire A, les deux ordres mènent à (60 °C ; 2 h).</p>
-</section>
+<section class="slide"><div class="kicker">Mission 0.3 · Nommer le raisonnement</div><h2>Cette règle de prévision est un modèle</h2><p>14 points gagnés pour 20 degrés : <b>0,7 point par degré</b>.</p><div class="eq">\[\text{rendement prévu}=20+0{,}7\,(T-40)\]</div><div class="box frag" style="margin-top:20px"><p>À 50 °C : 20 + 0,7 × 10 = <b>27 %</b>.</p></div><div class="frag"><div class="eq">\[\hat y=a+bT\]</div><p class="small">ŷ : prévision ; b : gain par degré ; a : constante qui place la droite.</p></div><p class="small">Ici, « modèle linéaire » inclut une constante : la droite ne passe pas forcément par l’origine.</p></section>
 
-<!-- 8 ============================================================ -->
-<section class="slide">
-  <div class="kicker">Mission A · formalisation</div>
-  <h2>Interaction : l'effet de \(T\) dépend de \(t\)</h2>
-  <div class="cols wide-right">
-    <div class="stack">
-      <div class="eq">\[ b_1^- = \tfrac{y_{(+,-)} - y_{(-,-)}}{2},\quad b_1^+ = \tfrac{y_{(+,+)} - y_{(-,+)}}{2} \]</div>
-      <div class="eq frag">\[ b_{12} = \frac{b_1^+ - b_1^-}{2} = \frac{y_{--} - y_{+-} - y_{-+} + y_{++}}{4} \]</div>
-      <table class="t frag">
-        <tr><th></th><th>\(b_1^-\)</th><th>\(b_1^+\)</th><th>\(b_{12}\)</th><th>\(b_1\)</th></tr>
-        <tr><td style="color:var(--s1)">A</td><td>7</td><td>9</td><td>1</td><td>8</td></tr>
-        <tr class="hl"><td style="color:var(--s2)">B</td><td>13</td><td>−15</td><td>−14</td><td>−1</td></tr>
-      </table>
-      <p class="frag small"><b>Laboratoire B : \(b_1 = -1\)</b>, et pourtant \(T\) fait varier le rendement de +26 points à 1 h et de −30 points à 2 h.</p>
-    </div>
-    <div><div id="ch-a-inter" class="chart"></div>
-      <p class="small muted center">Trait plein : t = 1 h · tirets : t = 2 h. Bleu : laboratoire A · orange : laboratoire B.</p></div>
-  </div>
-  <p class="src">F1 §4.</p>
-</section>
+<section class="slide"><div class="kicker">Mission 0.3 · Vérifier</div><h2>La mesure peut contredire la prévision</h2><p>À 50 °C, nous avions prévu <b>27 %</b>.</p><div class="box frag accent" style="margin-top:20px"><p>Nouvelle mesure fictive : <b>33 %</b>.<br>Écart : <b>6 points</b> ; écart-type de répétabilité annoncé : environ 1 point.</p></div><p class="frag">Vérifier la mesure et les conditions, puis examiner si une droite décrit suffisamment bien la relation.</p><div class="box frag good" style="margin-top:20px"><p>Deux points suffisent pour tracer une droite.<br>Ils ne suffisent pas pour vérifier qu’elle décrit le phénomène.</p></div></section>
 
-<!-- 9 ============================================================ -->
-<section class="slide">
-  <div class="kicker">Une interaction réelle</div>
-  <h2>Sécheur de gazole : pression × température</h2>
-  <div class="cols wide-left">
-    <figure><img class="orig" src="img/FACT_d36_image16.png" alt="Diagramme d'interaction pression/température, eau résiduelle">
-      <figcaption>Figure : M. Sergent (AMU). Moyennes de doublons d'un plan à trois facteurs ; réponse : eau résiduelle dans le produit.</figcaption></figure>
-    <div class="stack">
-      <p>À <b>70 °C</b>, augmenter la pression : 23,4 → <b>51,7</b></p>
-      <p>À <b>100 °C</b> : 11,7 → <b>12,4</b></p>
-      <div class="box"><p>Pour voir une interaction, il faut faire varier les deux facteurs <b>ensemble</b> au moins une fois.</p></div>
-    </div>
-  </div>
-</section>
+<section class="slide" data-timer="5"><div class="kicker">Mission A · 60–105 min</div><h2>Deux réglages : quelle stratégie choisir ?</h2><div class="cols"><div id="ch-a-strategies" class="chart" style="--h:380px"></div><div><p>Température : 40 ou 60 °C.<br>Durée : 1 ou 2 h.</p><div class="box " style="margin-top:20px"><p>Lecture comprise : <b>5 minutes</b> pour choisir et justifier en une phrase.</p></div><p class="small">Trois essais depuis la base, ou quatre combinaisons ?</p></div></div></section>
 
-<!-- 10 ============================================================ -->
-<section class="slide">
-  <div class="kicker">Synthèse A</div>
-  <h2>Faire varier un facteur à la fois : dans quels cas ?</h2>
-  <div class="cols">
-    <div class="box good"><h3>Défendable quand…</h3><ul class="small"><li>les interactions sont négligeables, et l'on sait pourquoi</li><li>le bruit est faible devant les effets</li><li>les essais sont séquentiels et rapides (stratégie adaptative : Frey &amp; Wang, 2006)</li><li>l'objectif est une amélioration locale</li></ul></div>
-    <div class="box accent"><h3>Risqué quand…</h3><ul class="small"><li>une interaction est plausible : on ne peut ni l'estimer, ni la détecter</li><li>il faut prédire ou comprendre</li><li>le bruit compte : \(\mathrm{Var}(b) = \sigma^2/2\) au lieu de \(\sigma^2/4\)</li></ul></div>
-  </div>
-  <div class="cols" style="margin-top:18px">
-    <div><p class="small">Avec un facteur à la fois, l'effet mesuré pour la température vaut en moyenne \(b_1 - b_{12}\), et l'erreur de prévision au coin non testé vaut \(4\,b_{12}\).</p></div>
-    <div class="box plain"><p class="small"><b>Vocabulaire.</b> Coefficient codé \(b_j = (\bar y_+ - \bar y_-)/2\) ; effet total \(\Delta_j = 2 b_j\). Dans A : \(b_1 = 8\), \(\Delta_1 = 16\) points, soit 0,8 point par °C.</p></div>
-  </div>
-  <p class="src">Czitrom (1999), Am. Stat. 53(2) ; Frey &amp; Wang (2006), Technometrics 48(3) ; Daniel (1973), JASA 68. F1 §3–4.</p>
-</section>
+<section class="slide" data-timer="7"><div class="kicker">Mission A · Préparer et comparer</div><h2>Repérer le résultat qu’il faudra prévoir</h2><div class="cols"><div class="box " style="margin-top:20px"><p><b>Prudence</b><br>Mesurer (40 ; 1), (60 ; 1), (40 ; 2).<br>Comment prévoir (60 ; 2) ? Quelle hypothèse faut-il accepter ?</p></div><div class="box accent" style="margin-top:20px"><p><b>Carte</b><br>Mesurer les quatre combinaisons.<br>Quelle comparaison supplémentaire devient possible ? Que coûte l’essai de plus ?</p></div></div><div class="timeline"><div><b>7 min</b>dessiner, préparer un argument</div><div><b>5 min</b>comparer les propositions</div><div><b>8 min</b>trois résultats, prévision, puis vérification</div></div></section>
 
-<!-- 11 ============================================================ -->
-<section class="slide" data-timer="3">
-  <div class="kicker">Mission B · prédiction individuelle</div>
-  <div class="question">Six lots où \(T\) et \(t\) ont toujours varié ensemble : que valent-ils ?</div>
-  <div class="cols">
-    <div id="ch-b-journal" class="chart"></div>
-    <div class="stack">
-      <table class="t small"><tr><th>Lot</th><th>T (°C)</th><th>t (h)</th><th>Rdt (%)</th></tr>
-        <tr><td>1</td><td>40</td><td>1</td><td>22,8</td></tr><tr><td>2</td><td>45</td><td>1,25</td><td>30,3</td></tr>
-        <tr><td>3</td><td>50</td><td>1,5</td><td>39,5</td></tr><tr><td>4</td><td>50</td><td>1,5</td><td>38,7</td></tr>
-        <tr><td>5</td><td>55</td><td>1,75</td><td>48,4</td></tr><tr><td>6</td><td>60</td><td>2</td><td>57,5</td></tr></table>
-      <div class="box accent"><p><b>La direction demande :</b> peut-on passer à <b>60 °C pendant 1 h</b> ? Quel rendement attendre ?</p></div>
-    </div>
-  </div>
-  <p class="src">Journal simulé à partir du modèle du laboratoire A, σ = 1,5, graine 2024.</p>
-</section>
+<section class="slide"><div class="kicker">Mission A · Prévoir avant de révéler</div><h2>Peut-on additionner les gains ?</h2><table class="t"><tr><th>Réglages</th><th>Laboratoire A</th><th>Laboratoire B</th></tr><tr><td>40 °C ; 1 h</td><td>23 %</td><td>17 %</td></tr><tr><td>60 °C ; 1 h</td><td>37 %</td><td>43 %</td></tr><tr><td>40 °C ; 2 h</td><td>41 %</td><td>65 %</td></tr></table><p>Départ + gain température + gain durée : que prévoir à 60 °C pendant 2 h ?</p><div class="box frag" style="margin-top:20px"><p>A : 23 + (37 − 23) + (41 − 23) = <b>55 %</b>.<br>B : 17 + (43 − 17) + (65 − 17) = <b>91 %</b>.</p></div></section>
 
-<!-- 12 ============================================================ -->
-<section class="slide">
-  <div class="kicker">Mission B · informations nouvelles</div>
-  <h2>Trois analystes, un même journal</h2>
-  <table class="t" style="margin-bottom:14px">
-    <tr><th></th><th>\(\hat b_1\) (T)</th><th>\(\hat b_2\) (t)</th><th>somme des carrés des résidus</th><th>prédiction en (60 °C ; 1 h)</th></tr>
-    <tr class="frag"><td>Analyste 1 : « seule la température compte »</td><td>17,5</td><td>0</td><td>1,75</td><td><b>57,0</b></td></tr>
-    <tr class="frag"><td>Analyste 2 : « seule la durée compte »</td><td>0</td><td>17,5</td><td>1,75</td><td><b>22,0</b></td></tr>
-    <tr class="frag"><td>Analyste 3 : « les deux autant »</td><td>8,75</td><td>8,75</td><td>1,75</td><td><b>39,5</b></td></tr>
-    <tr class="frag hl"><td>Essai réalisé à (60 °C ; 1 h)</td><td colspan="3"></td><td><b>37</b></td></tr>
-  </table>
-  <div class="cols">
-    <p class="frag">Les trois analyses décrivent le journal aussi bien l'une que l'autre. <b>Les données ne permettent pas de les départager</b>, et des lots supplémentaires du même type n'y changeraient rien.</p>
-    <p class="frag box plain small">Seule la <b>somme</b> \(b_1 + b_2 = 17{,}5\) est déterminée : c'est l'effet d'un changement <b>combiné</b> de T et de t.</p>
-  </div>
-</section>
+<section class="slide"><div class="kicker">Mission A · Résultats révélés</div><h2>Le gain de température dépend-il de la durée ?</h2><div class="worlds"><div class="wA"><h3>Laboratoire A</h3><div id="ch-a-worldA" class="chart" style="--h:330px"></div><p class="small">55 % prévus ; <b>59 % mesurés</b>.<br>Gain T : <b>+14</b> à 1 h ; <b>+18</b> à 2 h.</p></div><div class="wB"><h3>Laboratoire B</h3><div id="ch-a-worldB" class="chart" style="--h:330px"></div><p class="small">91 % prévus ; <b>35 % mesurés</b>.<br>Gain T : <b>+26</b> à 1 h ; <b>−30</b> à 2 h.</p></div></div></section>
 
-<!-- 13 ============================================================ -->
-<section class="slide">
-  <div class="kicker">Mission B · formalisation</div>
-  <h2>Deux colonnes identiques : la confusion des effets</h2>
-  <div class="cols wide-left">
-    <div class="stack">
-      <div class="eq">\[ \mathbf X = \begin{pmatrix} 1 & -1 & -1\\ 1 & -0{,}5 & -0{,}5\\ 1 & 0 & 0\\ 1 & 0 & 0\\ 1 & 0{,}5 & 0{,}5\\ 1 & 1 & 1\end{pmatrix} \qquad \mathbf X \begin{pmatrix}0\\-1\\1\end{pmatrix} = \mathbf 0 \]</div>
-      <p class="frag small">On peut ajouter \(\lambda(0,-1,1)\) aux coefficients sans changer <b>aucune</b> prédiction aux 6 lots.</p>
-      <div class="frag box"><p><b>Rang</b> de \(\mathbf X\) = nombre maximal de colonnes linéairement indépendantes. Ici <b>2 &lt; 3</b> coefficients : le modèle n'est <b>pas identifiable</b>.</p></div>
-    </div>
-    <div><div id="ch-b-domain" class="chart" style="--h:500px"></div><p class="small center">Tous les lots sont sur la diagonale. L'essai découplé (60 °C ; 1 h) lève la confusion.</p></div>
-  </div>
-  <p class="src">F0, section 5 · F1 §5.</p>
-</section>
+<section class="slide"><div class="kicker">Mission A · Nommer le constat</div><h2>Interaction : un réglage modifie l’effet de l’autre</h2><div id="ch-a-inter" class="chart" style="--h:350px"></div><div class="box " style="margin-top:20px"><p>Dans B, chauffer aide à 1 h et pénalise à 2 h.<br>Un gain de température unique ne décrit pas les deux situations.</p></div></section>
 
-<!-- 14 ============================================================ -->
-<section class="slide">
-  <div class="kicker">Synthèse B</div>
-  <h2>Ce qui est identifiable dépend de la question posée</h2>
-  <div class="cols">
-    <div class="box good"><h3>Faire varier ensemble suffit si…</h3><ul class="small"><li>la décision porte sur un <b>changement combiné</b> (protocole 1 → protocole 2)</li><li>les facteurs sont liés par une contrainte physique</li><li>on veut seulement détecter « quelque chose »</li></ul></div>
-    <div class="box accent"><h3>Insuffisant si…</h3><ul class="small"><li>on veut attribuer un effet à un facteur</li><li>on veut prédire une combinaison non testée</li><li>on veut diagnostiquer un problème</li></ul></div>
-  </div>
-  <div class="box plain" style="margin-top:20px"><p><b>Données de production</b> : la confusion y est la règle (habitudes des opérateurs, saisons, lots). Une régression produit toujours des nombres ; elle ne garantit pas leur sens.</p></div>
-</section>
+<section class="slide"><div class="kicker">Mission A · Formaliser</div><h2>Du raisonnement au modèle à deux facteurs</h2><p>Première hypothèse : les contributions s’ajoutent.</p><div class="eq">\[\hat y=b_0+b_1x_1+b_2x_2\]</div><p class="small">b₀ : prévision au centre ; b₁ et b₂ : contributions par unité codée dans ce modèle.</p><div class="frag"><div class="box " style="margin-top:20px"><p>Pour représenter l’interaction, une contribution dépend des deux réglages :</p></div><div class="eq">\[\hat y=b_0+b_1x_1+b_2x_2+b_{12}x_1x_2\]</div></div><p class="small">Nous construirons le produit x₁x₂ en mission C. Aucun calcul de coefficients ici.</p></section>
 
-<!-- 15 ============================================================ -->
-<section class="slide section" data-timer="15">
-  <h1 style="margin-top:160px">Pause</h1>
-  <p class="big">Reprise dans 15 minutes : touche T.</p>
-  <p class="muted">À la reprise : « Plus d'expériences signifie-t-il plus d'information ? »</p>
-</section>
+<section class="slide" data-timer="15"><div class="kicker">105–120 min</div><h2>Pause</h2><p>Reprise dans quinze minutes.</p><p>Si température et durée changent toujours ensemble, que peut-on comprendre ?</p></section>
 
-<!-- 16 ============================================================ -->
-<section class="slide" data-timer="3">
-  <div class="kicker">Mission C · prédiction individuelle</div>
-  <div class="question">Plus d'expériences signifie-t-il plus d'information ?</div>
-  <div id="ch-c-plans" class="chart" style="max-height:470px"></div>
-  <p class="small"><b>Seul, 3 min :</b> classez P1 à P5 du plus informatif au moins informatif. Que veut dire « informatif » pour vous ?</p>
-</section>
+<section class="slide" data-timer="5"><div class="kicker">Mission B · 120–155 min</div><h2>Beaucoup de mesures, mais quelle comparaison ?</h2><table class="t"><tr><th>Lot</th><th>T (°C)</th><th>t (h)</th><th>Rendement (%)</th></tr><tr><td>1</td><td>40</td><td>1</td><td>22,8</td></tr><tr><td>2</td><td>45</td><td>1,25</td><td>30,3</td></tr><tr><td>3</td><td>50</td><td>1,5</td><td>39,5</td></tr><tr><td>4</td><td>50</td><td>1,5</td><td>38,7</td></tr><tr><td>5</td><td>55</td><td>1,75</td><td>48,4</td></tr><tr><td>6</td><td>60</td><td>2</td><td>57,5</td></tr></table><p>On envisage <b>60 °C pendant 1 h</b>. Quelle comparaison isole la température ? Codez les lots 2 et 5.</p></section>
 
-<!-- 17 ============================================================ -->
-<section class="slide">
-  <div class="kicker">Mission C · outils</div>
-  <h2>Le modèle linéaire, en une ligne</h2>
-  <div class="eq-big">\[ \mathbf Y = \mathbf X\,\boldsymbol\beta + \boldsymbol\varepsilon \]</div>
-  <div class="cols">
-    <div class="eq">\[ \underbrace{\begin{pmatrix} y_1\\ y_2\\ y_3\\ y_4\end{pmatrix}}_{N\times 1} = \underbrace{\begin{pmatrix} 1 & -1 & -1\\ 1 & 1 & -1\\ 1 & -1 & 1\\ 1 & 1 & 1\end{pmatrix}}_{N\times p} \underbrace{\begin{pmatrix} b_0\\ b_1\\ b_2\end{pmatrix}}_{p\times 1} + \boldsymbol\varepsilon \]</div>
-    <div class="stack small">
-      <p class="frag">Une <b>ligne</b> par essai, une <b>colonne</b> par terme du modèle (1, \(x_1\), \(x_2\), \(x_1x_2\)…).</p>
-      <p class="frag">« Linéaire » : linéaire <b>en les coefficients</b>. \(x_1x_2\) et \(x_1^2\) sont permis.</p>
-      <p class="frag">Moindres carrés : \(\hat{\boldsymbol\beta} = (\mathbf X^\top \mathbf X)^{-1}\mathbf X^\top \mathbf y\) (F0, section 8)</p>
-    </div>
-  </div>
-</section>
+<section class="slide"><div class="kicker">Mission B · Simplifier ensemble</div><h2>Les deux colonnes codées sont identiques</h2><div class="cols"><table class="t"><tr><th>Lot</th><th>x₁</th><th>x₂</th></tr><tr><td>1</td><td>−1</td><td>−1</td></tr><tr><td>2</td><td>−0,5</td><td>−0,5</td></tr><tr><td>3</td><td>0</td><td>0</td></tr><tr><td>4</td><td>0</td><td>0</td></tr><tr><td>5</td><td>+0,5</td><td>+0,5</td></tr><tr><td>6</td><td>+1</td><td>+1</td></tr></table><div><p>Dans le journal, x₂ = x₁.</p><div class="eq">\[\hat y=b_0+b_1x_1+b_2x_1\]</div><div class="frag"><div class="eq">\[\hat y=b_0+(b_1+b_2)x_1\]</div><p>Connaître la somme ne donne pas les deux contributions séparées.</p></div></div></div></section>
 
-<!-- 18 ============================================================ -->
-<section class="slide">
-  <div class="kicker">Mission C · exemple résolu → à vous</div>
-  <h2>\(\mathbf X^\top\mathbf X\) : un tableau de produits scalaires de colonnes</h2>
-  <div class="cols">
-    <div class="stack">
-      <div class="eq">\[ (\mathbf X^\top\mathbf X)_{jk} = \mathbf x_j \cdot \mathbf x_k = \sum_i x_{ij}\,x_{ik} \]</div>
-      <p class="frag small">P4 (factoriel) : \(\mathbf 1\cdot\mathbf 1 = 4\), \(\mathbf 1\cdot\mathbf x_1 = -1+1-1+1 = 0\), \(\mathbf x_1\cdot\mathbf x_2 = 1-1-1+1 = 0\)</p>
-      <div class="frag eq">\[ \mathbf X^\top\mathbf X_{\mathrm{P4}} = \begin{pmatrix}4&0&0\\0&4&0\\0&0&4\end{pmatrix} \]</div>
-    </div>
-    <div class="stack">
-      <div class="box"><p><b>À vous (M1 p. 6) :</b> \(\mathbf X\) et \(\mathbf X^\top\mathbf X\) pour P2 (3 essais), puis P3 (dupliqué) et P1 (journal).</p></div>
-      <div class="frag eq">\[ \mathbf X^\top\mathbf X_{\mathrm{P2}} = \begin{pmatrix}3&-1&-1\\-1&3&-1\\-1&-1&3\end{pmatrix}\quad \mathbf X^\top\mathbf X_{\mathrm{P3}} = 2\times\mathbf X^\top\mathbf X_{\mathrm{P2}} \]</div>
-      <p class="frag small">Termes hors diagonale \(\neq 0\) ⟺ colonnes <b>non orthogonales</b>.</p>
-    </div>
-  </div>
-</section>
+<section class="slide"><div class="kicker">Mission B · Examiner trois hypothèses</div><h2>Même journal, prévisions différentes</h2><p class="small">Même constante 39,53 ; même somme b₁ + b₂ = 17,5.</p><table class="t"><tr><th>Hypothèse</th><th>b₁</th><th>b₂</th><th>Prévision à (60 °C ; 1 h)</th></tr><tr><td>Tout attribuer à T</td><td>17,5</td><td>0</td><td>57,0 %</td></tr><tr><td>Tout attribuer à t</td><td>0</td><td>17,5</td><td>22,0 %</td></tr><tr><td>Partager également</td><td>8,75</td><td>8,75</td><td>39,5 %</td></tr></table><div class="box frag" style="margin-top:20px"><p>Les trois modèles s’ajustent aussi bien au journal.<br>Les données seules ne permettent pas de les départager.</p></div></section>
 
-<!-- 19 ============================================================ -->
-<section class="slide">
-  <div class="kicker">Mission C · résultats</div>
-  <h2>Nombre d'essais ≠ rang ≠ répétitions ≠ précision</h2>
-  <table class="t num">
-    <tr><th>Plan</th><th>N</th><th>rang additif (/3)</th><th>rang avec \(x_1x_2\) (/4)</th><th>ddl erreur pure</th><th>\(\mathrm{Var}(\hat b_1)/\sigma^2\)</th><th>\(\mathrm{Corr}(\hat b_1,\hat b_2)\)</th></tr>
-    <tr class="frag"><td>P1 journal</td><td>6</td><td class="ko">2</td><td>3</td><td>1</td><td>—</td><td>—</td></tr>
-    <tr class="frag"><td>P2 un facteur à la fois</td><td>3</td><td>3</td><td class="ko">3</td><td>0</td><td>1/2</td><td>0,5</td></tr>
-    <tr class="frag"><td>P3 idem dupliqué</td><td>6</td><td>3</td><td class="ko">3</td><td>3</td><td>1/4</td><td>0,5</td></tr>
-    <tr class="frag hl"><td>P4 factoriel</td><td>4</td><td>3</td><td class="ok">4</td><td>0</td><td>1/4</td><td>0</td></tr>
-    <tr class="frag"><td>P5 factoriel dupliqué</td><td>8</td><td>3</td><td class="ok">4</td><td>4</td><td>1/8</td><td>0</td></tr>
-  </table>
-  <div class="cols" style="margin-top:16px">
-    <p class="frag small"><b>Répéter</b> ne change pas le rang : il réduit la variance et permet d'<b>estimer le bruit</b>.</p>
-    <p class="frag small"><b>P3 contre P4</b> : même \(\mathrm{Var}(\hat b_1)\), mais P4 coûte 2 essais de moins et identifie l'interaction. P3 garde un atout : 3 ddl pour \(\sigma^2\).</p>
-  </div>
-  <p class="src">Valeurs vérifiées : validation/rapport_verification.md. F1 §7.</p>
-</section>
+<section class="slide" data-timer="3"><div class="kicker">Mission B · Choisir une comparaison utile</div><h2>Quel essai séparerait les contributions ?</h2><div class="cols"><div id="ch-b-domain" class="chart" style="--h:380px"></div><div><p>Proposez un essai où <b>x₁ ≠ x₂</b>.</p><div class="box frag good" style="margin-top:20px"><p>À 60 °C pendant 1 h, la mesure révélée est <b>37 %</b>.</p></div><p class="frag small">Sous le modèle additif, cet essai permet de séparer les contributions. Il ne valide pas à lui seul le modèle.</p></div></div></section>
 
-<!-- 20 ============================================================ -->
-<section class="slide">
-  <div class="kicker">Synthèse C</div>
-  <h2>Quatre questions avant de compter les essais</h2>
-  <div class="cols c3">
-    <div class="box"><h3>Rang</h3><p class="small">Combien d'effets peut-on séparer ? \(\mathrm{rang}(\mathbf X) = p\) ⟺ identifiable.</p></div>
-    <div class="box good"><h3>Répétitions</h3><p class="small">Peut-on estimer \(\sigma^2\) sans faire confiance au modèle ? ddl = \(N - n_{\text{distincts}}\).</p></div>
-    <div class="box violet"><h3>Précision</h3><p class="small">Avec quelle dispersion estime-t-on chaque effet ? Réponse : \(\sigma^2(\mathbf X^\top\mathbf X)^{-1}\) (Mission D).</p></div>
-  </div>
-  <div class="box accent" style="margin-top:22px"><p>Un plan <b>saturé</b> (\(N = p\)) passe exactement par tous les points. Cet ajustement parfait ne prouve pas que le modèle soit bon : il ne reste simplement aucune mesure pour le vérifier.</p></div>
-</section>
+<section class="slide"><div class="kicker">Mission C · Du tableau à X · 155–200 min</div><h2>Une colonne par terme du modèle</h2><div class="eq">\[\hat y=b_0+b_1x_1+b_2x_2\]</div><table class="t"><tr><th>Essai</th><th>Pour b₀</th><th>Pour b₁x₁</th><th>Pour b₂x₂</th></tr><tr><td>40 °C ; 1 h</td><td>1</td><td>−1</td><td>−1</td></tr><tr><td>60 °C ; 1 h</td><td>1</td><td>+1</td><td>−1</td></tr><tr><td>40 °C ; 2 h</td><td>1</td><td>−1</td><td>+1</td></tr><tr><td>60 °C ; 2 h</td><td>1</td><td>+1</td><td>+1</td></tr></table><p>La colonne de <b>1</b> multiplie b₀ : la valeur de départ intervient dans chaque prévision.</p></section>
 
-<!-- 21 ============================================================ -->
-<section class="slide" data-timer="3">
-  <div class="kicker">Mission D · prédiction individuelle</div>
-  <div class="question">Deux plans identifiables de 4 essais sont-ils équivalents ?</div>
-  <div class="cols">
-    <div><h3 style="color:var(--s1)">Q1 : factoriel</h3><div id="ch-d-q1" class="chart" style="--h:420px"></div></div>
-    <div><h3 style="color:var(--s2)">Q2 : un facteur à la fois + base répétée</h3><div id="ch-d-q2" class="chart" style="--h:420px"></div></div>
-  </div>
-  <p class="small">Seul, 3 min : lequel estime \(b_1\) avec la meilleure précision ? <b>De combien ?</b></p>
-</section>
+<section class="slide" data-timer="5"><div class="kicker">Mission C · Un exemple fait ensemble</div><h2>Lire X comme une recette de calcul</h2><p>Exemple fourni : b₀ = 40, b₁ = 8, b₂ = 10.</p><div class="eq">\[(1,-1,-1)\ \longrightarrow\ 1\times40-1\times8-1\times10=22\]</div><div class="box " style="margin-top:20px"><p>Construisez X pour les quatre essais, puis calculez les trois autres prévisions.</p></div><div class="frag"><div class="eq">\[\mathbf X=\begin{pmatrix}1&-1&-1\\1&1&-1\\1&-1&1\\1&1&1\end{pmatrix},\quad\boldsymbol\beta=\begin{pmatrix}40\\8\\10\end{pmatrix},\quad\hat{\mathbf y}=\begin{pmatrix}22\\38\\42\\58\end{pmatrix}\]</div></div></section>
 
-<!-- 22 ============================================================ -->
-<section class="slide">
-  <div class="kicker">Mission D · démonstration</div>
-  <h2>La précision d'un plan se calcule avant l'expérience</h2>
-  <div class="cols wide-left">
-    <div class="stack">
-      <p class="frag"><b>1.</b> \(\hat{\boldsymbol\beta} = \mathbf A\,\mathbf y\), avec \(\mathbf A = (\mathbf X^\top\mathbf X)^{-1}\mathbf X^\top\)</p>
-      <p class="frag"><b>2.</b> \(\mathrm{Cov}(\mathbf A\mathbf y) = \mathbf A\,\mathrm{Cov}(\mathbf y)\,\mathbf A^\top\) <span class="small muted">(F0, section 9)</span></p>
-      <p class="frag"><b>3.</b> \(\mathrm{Cov}(\mathbf y) = \sigma^2\mathbf I\) et \((\mathbf X^\top\mathbf X)^{-1}\) symétrique :</p>
-      <div class="frag eq-big" style="font-size:44px">\[ \mathrm{Cov}(\hat{\boldsymbol\beta}) = \sigma^2\,(\mathbf X^\top\mathbf X)^{-1}\mathbf X^\top\mathbf X\,(\mathbf X^\top\mathbf X)^{-1} = \boxed{\sigma^2(\mathbf X^\top\mathbf X)^{-1}} \]</div>
-    </div>
-    <div class="stack">
-      <div class="box violet small"><p><b>Hypothèses</b> : erreurs de même variance, non corrélées ; niveaux maîtrisés ; rang plein.</p></div>
-      <div class="frag box"><p class="small">Q2 : \((\mathbf X^\top\mathbf X)^{-1} = \tfrac18\begin{pmatrix}4&2&2\\2&3&1\\2&1&3\end{pmatrix}\)</p>
-      <p class="small">\(\mathrm{Var}(\hat b_1) = \tfrac38\sigma^2\) contre \(\tfrac14\sigma^2\) pour Q1 : <b>+50 %</b> ; \(\mathrm{Corr} = \tfrac13\).</p></div>
-    </div>
-  </div>
-</section>
+<section class="slide"><div class="kicker">Mission C · Écrire en notation matricielle</div><h2>Regrouper les mêmes calculs</h2><div class="eq">\[\hat{\mathbf y}=\mathbf X\boldsymbol\beta\]</div><div class="cols c3"><div class="box " style="margin-top:20px"><p><b>X : 4 × 3</b><br>Une ligne par essai.<br>Une colonne par terme.</p></div><div class="box " style="margin-top:20px"><p><b>β : 3 × 1</b><br>Les trois coefficients.</p></div><div class="box good" style="margin-top:20px"><p><b>ŷ : 4 × 1</b><br>Une prévision par essai.</p></div></div><div class="frag"><div class="eq">\[\mathbf y=\mathbf X\boldsymbol\beta+\boldsymbol\varepsilon\]</div><p class="small">y contient les mesures ; ŷ contient les prévisions. ε représente les écarts aléatoires sous les hypothèses du modèle.</p></div></section>
 
-<!-- 23 ============================================================ -->
-<section class="slide">
-  <div class="kicker">Mission D · simulation</div>
-  <h2>500 campagnes simulées : la forme de l'incertitude</h2>
-  <div class="cols wide-left">
-    <div id="ch-d-clouds" class="chart"></div>
-    <div class="stack">
-      <div class="legend"><span style="--c:var(--s1)">Q1 factoriel</span><span style="--c:var(--s2)">Q2 base répétée</span></div>
-      <p class="small">Chaque point est le couple \((\hat b_1,\hat b_2)\) d'une campagne simulée de 4 essais (monde A sans interaction, \(\sigma = 1{,}5\), graine fixe).</p>
-      <p class="small">Les ellipses représentent \(\pm 2\) écarts-types, calculés à partir de \(\sigma^2(\mathbf X^\top\mathbf X)^{-1}\).</p>
-      <div class="box small"><p>Cercle : coefficients non corrélés. Ellipse inclinée : une erreur sur un point partagé se répercute sur les deux coefficients.</p></div>
-      <p class="small muted">Laboratoire, onglet « Comparer », code PRECISION.</p>
-    </div>
-  </div>
-</section>
+<section class="slide" data-timer="4"><div class="kicker">Mission C · Une nouvelle colonne</div><h2>Représenter l’interaction par x₁x₂</h2><table class="t"><tr><th>Essai</th><th>1</th><th>x₁</th><th>x₂</th><th>x₁x₂ à compléter</th></tr><tr><td>1</td><td>1</td><td>−1</td><td>−1</td><td>?</td></tr><tr><td>2</td><td>1</td><td>+1</td><td>−1</td><td>?</td></tr><tr><td>3</td><td>1</td><td>−1</td><td>+1</td><td>?</td></tr><tr><td>4</td><td>1</td><td>+1</td><td>+1</td><td>?</td></tr></table><div class="box frag" style="margin-top:20px"><p>La colonne vaut <b>(+1, −1, −1, +1)</b>.<br>Avec ce terme, X a <b>4 lignes et 4 colonnes</b>.</p></div></section>
 
-<!-- 24 ============================================================ -->
-<section class="slide" data-timer="12">
-  <div class="kicker">Mission D · information nouvelle</div>
-  <h2>Zone interdite : \(x_1 + x_2 > 1\). Quel plan de 4 essais ?</h2>
-  <div class="cols wide-right">
-    <div id="ch-d-constraint" class="chart"></div>
-    <div>
-      <table class="t num small" style="font-size:22px">
-        <tr><th>Plan</th><th>\(\mathrm{Var}(\hat b_1)\)</th><th>Corr</th><th>\(\det \mathbf X^\top\mathbf X\)</th><th>\(\mathrm{Var}(\hat b_{12})\)</th></tr>
-        <tr><td>Q1 factoriel</td><td colspan="4" class="ko">non réalisable</td></tr>
-        <tr class="frag"><td>R base répétée</td><td>0,375</td><td>0,33</td><td>32</td><td class="ko">non identif.</td></tr>
-        <tr class="frag"><td>C centre</td><td>0,458</td><td>0,45</td><td>24</td><td>1,5</td></tr>
-        <tr class="frag"><td>F frontière</td><td>0,336</td><td>0,25</td><td>38</td><td>0,47</td></tr>
-        <tr class="frag"><td>S resserré ±0,5</td><td>1</td><td>0</td><td>4</td><td>4</td></tr>
-      </table>
-      <p class="small">Variances en unités de \(\sigma^2\). Rôles : une fiche de plan par équipe (M1-annexe p. 5). Laboratoire, code CONTRAINTE.</p>
-    </div>
-  </div>
-</section>
+<section class="slide"><div class="kicker">Mission C · Comprendre le rang</div><h2>Compter les colonnes ne suffit pas</h2><div class="cols"><div class="box accent" style="margin-top:20px"><p><b>Journal</b><br>Trois colonnes, mais x₁ et x₂ sont identiques.<br>On ne sépare pas trois coefficients : <b>rang 2</b>.</p></div><div class="box good" style="margin-top:20px"><p><b>Quatre combinaisons</b><br>Les colonnes 1, x₁ et x₂ sont indépendantes.<br>Modèle additif identifiable : <b>rang 3</b>.</p></div></div><p>Le rang compte les colonnes indépendantes. La question est : peut-on déterminer séparément les coefficients de ce modèle ?</p></section>
 
-<!-- 25 ============================================================ -->
-<section class="slide">
-  <div class="kicker">Synthèse D</div>
-  <h2>Cinq notions à ne jamais confondre</h2>
-  <table class="t five" style="width:100%">
-    <tr><th>Notion</th><th>Question</th><th>Contre-exemple de la séance</th></tr>
-    <tr><td><b>Identifiable</b></td><td>rang(X) = p ?</td><td>R identifiable, mais non orthogonal</td></tr>
-    <tr><td><b>Orthogonal</b></td><td>XᵀX diagonale ?</td><td>S orthogonal, mais 4 fois moins précis</td></tr>
-    <tr><td><b>Précis</b></td><td>σ²(XᵀX)⁻¹ petit ?</td><td>dépend de la position des points, pas seulement de N</td></tr>
-    <tr><td><b>Modèle valide</b></td><td>aucun terme oublié ?</td><td>2² orthogonal + courbure oubliée : b̂₀ biaisé (34 au lieu de 40)</td></tr>
-    <tr><td><b>Sans interaction</b></td><td>propriété du système</td><td>laboratoire B : b₁₂ = −14</td></tr>
-  </table>
-  <div class="cols" style="margin-top:16px">
-    <div class="eq">\[ |x_{ij}| \le 1 \;\Rightarrow\; \mathrm{Var}(\hat b_j) \ge \frac{\sigma^2}{\|\mathbf x_j\|^2} \ge \frac{\sigma^2}{N} \]</div>
-    <p class="small">Égalité ⟺ colonne de ±1 <b>orthogonale</b> aux autres (Cauchy–Schwarz, F0, section 9).</p>
-  </div>
-</section>
+<section class="slide" data-timer="6"><div class="kicker">Mission D · Comparer des plans · 200–225 min</div><h2>Répéter ou ajouter une combinaison ?</h2><table class="t"><tr><th>Plan</th><th>Conditions différentes</th><th>Total d’essais</th><th>Répétitions</th></tr><tr><td>P2 : trois coins</td><td>3</td><td>3</td><td>Non</td></tr><tr><td>P3 : trois coins, deux fois</td><td>3</td><td>6</td><td>Oui</td></tr><tr><td>P4 : quatre coins</td><td>4</td><td>4</td><td>Non</td></tr><tr><td>P5 : quatre coins, deux fois</td><td>4</td><td>8</td><td>Oui</td></tr></table><p>Quel plan permet d’étudier l’interaction ? D’observer la dispersion à réglages identiques ? De faire les deux ?</p></section>
 
-<!-- 26 ============================================================ -->
-<section class="slide" data-timer="10">
-  <div class="kicker">Mission finale</div>
-  <div class="question">Méthode SPME-GC-MS : 4 facteurs, 8 essais. Que recommandez-vous ?</div>
-  <div class="cols wide-left">
-    <table class="t small" style="font-size:22px">
-      <tr><th></th><th>Facteur</th><th>−1</th><th>+1</th></tr>
-      <tr><td>A</td><td>Température d'extraction</td><td>30 °C</td><td>60 °C</td></tr>
-      <tr><td>B</td><td>Durée d'extraction</td><td>10 min</td><td>40 min</td></tr>
-      <tr><td>C</td><td>Ajout de NaCl</td><td>0 %</td><td>25 %</td></tr>
-      <tr><td>D</td><td>Agitation</td><td>250 tr/min</td><td>750 tr/min</td></tr>
-    </table>
-    <div class="stack small">
-      <p>Répétabilité : \(\sigma \approx 3\) unités d'aire. Une interaction A × B est plausible. L'effet de l'agitation est discuté.</p>
-      <div class="box"><p><b>Fiche d'équipe (M1 p. 10)</b> : stratégie, matrice 8 × 4, modèle, hypothèses, <b>ce que l'on ne pourra pas conclure</b>.</p></div>
-      <p>Puis 90 s par équipe et 2 critiques tirées au sort.</p>
-    </div>
-  </div>
-</section>
+<section class="slide"><div class="kicker">Mission D · Relier le plan à la question</div><h2>Plus de mesures, mais combien de directions ?</h2><div class="cols"><div class="box " style="margin-top:20px"><p><b>Répéter un point</b><br>Observer la dispersion et stabiliser la moyenne.<br>Les lignes répétées n’augmentent pas le rang.</p></div><div class="box good" style="margin-top:20px"><p><b>Ajouter le quatrième coin</b><br>Séparer les quatre termes du modèle avec interaction.<br>Une condition nouvelle apporte une information absente.</p></div></div><p class="frag">Avec interaction : P3 a un rang de 3 ; P4, un rang de 4.<br>P5 réunit quatre combinaisons et des répétitions.</p></section>
 
-<!-- 27 ============================================================ -->
-<section class="slide">
-  <div class="kicker">Synthèse · ticket de sortie · séance 2</div>
-  <h2>Ce qu'il faut retenir de la séance</h2>
-  <div class="cols wide-left">
-    <ul class="small">
-      <li>une stratégie repose sur des <b>hypothèses</b> (additivité, absence de courbure) qu'elle permet, ou non, de tester ;</li>
-      <li>l'<b>identifiabilité</b> se lit dans le rang de \(\mathbf X\), pas dans le nombre d'essais ;</li>
-      <li>la <b>précision</b>, \(\sigma^2(\mathbf X^\top\mathbf X)^{-1}\), dépend de la position des points et se calcule <b>avant</b> d'expérimenter ;</li>
-      <li>un bon plan dit aussi <b>ce qu'il ne permettra pas de conclure</b>.</li>
-    </ul>
-    <div class="stack">
-      <div class="box accent"><p class="small"><b>Retour au vote du début :</b> deux plans de 4 essais peuvent-ils donner des précisions différentes ? Ticket de sortie, M1 p. 12 (3 min).</p></div>
-      <figure><img class="orig" style="max-height:230px" src="img/INTRO_d28_image19.png" alt="Coefficients soudure laser">
-      <figcaption>Soudure laser : 3 facteurs en 4 essais, \(\mathrm{Var} = \sigma^2/4\) (figure : M. Sergent, AMU). Mais \(x_3 = -x_1x_2\)… <b>Séance 2.</b></figcaption></figure>
-    </div>
-  </div>
-</section>
+<section class="slide" data-timer="3"><div class="kicker">Mission D · Décider</div><h2>Votre laboratoire dispose de quatre essais</h2><p>Il veut savoir si température et durée interagissent dans le domaine étudié.</p><div class="box " style="margin-top:20px"><p>Proposez quatre réglages, justifiez le choix et indiquez une limite de ce que vous pourrez conclure.</p></div><div class="box frag good" style="margin-top:20px"><p>Les quatre combinaisons permettent de calculer l’interaction aux niveaux choisis. Sans répétition ni mesure intérieure, pas de contrôle direct de la répétabilité ni d’une courbure entre les niveaux.</p></div></section>
 
+<section class="slide"><div class="kicker">Synthèse · 225–230 min</div><h2>Le chemin parcouru</h2><ol><li><b>Un essai</b> : réglages choisis et réponse mesurée.</li><li><b>Le codage</b> : une autre écriture des mêmes réglages.</li><li><b>Un modèle</b> : une règle de prévision sous hypothèses.</li><li><b>X</b> : une ligne par essai, une colonne par terme.</li><li><b>Un plan</b> : un choix selon la question et les contributions à séparer.</li></ol></section>
+
+<section class="slide" data-timer="5"><div class="kicker">Ticket de sortie · 230–240 min</div><h2>Ce que vous savez faire seuls</h2><ol><li>Décodez (+1 ; −1), puis écrivez sa ligne de X pour le modèle additif.</li><li>Une prévision de modèle est-elle une mesure ? Expliquez.</li><li>Pourquoi répéter les lots du journal ne sépare-t-il pas température et durée ?</li></ol><p>Ajoutez une question qui vous reste. Remettez le ticket.</p></section>
 </main>
 <script src="../../commun/web/vendor/katex/katex.min.js"></script>
 <script src="../../commun/web/vendor/katex/contrib/auto-render.min.js"></script>

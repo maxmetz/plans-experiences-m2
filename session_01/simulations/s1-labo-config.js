@@ -12,7 +12,7 @@
   window.LAB_CONFIG = {
     session: 's1', storageKey: 's1-v1',
     title: 'Laboratoire — Plans d\'expériences, séance 1',
-    subtitle: 'Simuler, construire X, calculer le rang, XᵀX et la covariance des coefficients',
+    subtitle: 'Choisir les essais, comparer les mesures, puis construire la matrice X',
     teacherCode: 'MENTOR',
     codes: S.codes,
     factors: S.factors2,
@@ -48,6 +48,6 @@
       { id: 'F-OFAT', group: 'Mission finale (SPME)', label: 'Un facteur à la fois + 3 répétitions de la base', factors: f4, design: [[-1, -1, -1, -1], [1, -1, -1, -1], [-1, 1, -1, -1], [-1, -1, 1, -1], [-1, -1, -1, 1], [-1, -1, -1, -1], [-1, -1, -1, -1], [-1, -1, -1, -1]], model: 'lineaire', world: 'F', code: 'SPME', seed: 31 },
       { id: 'F-VIDE', group: 'Mission finale (SPME)', label: 'Plan d\'équipe (8 essais à saisir)', factors: f4, design: Array.from({ length: 8 }, () => [-1, -1, -1, -1]), model: 'lineaire', world: 'F', code: 'SPME', seed: 31 },
     ],
-    teacherNotes: 'Ordre conseillé des codes : ROUGE et VERT (mission A, après ouverture des enveloppes) → JOURNAL (préparation B) → DECOUPLE (révélation B) → MATRICE (mission C) → PRECISION (mission D) → CONTRAINTE (après l\'annonce) → SPME (mission finale). Le monde SPME reste caché aux étudiants ; utilisez « Révéler le monde simulé » en fin de séance.',
+    teacherNotes: 'Séance guidée : première heure avec M1 (tableau, codage, modèle) ; ROUGE/VERT après les résultats de A ; JOURNAL puis DECOUPLE en B ; MATRICE en C et D. D utilise C-P2 à C-P5 avec le modèle interactions. PRECISION, CONTRAINTE et SPME sont des approfondissements ultérieurs.',
   };
 })();
