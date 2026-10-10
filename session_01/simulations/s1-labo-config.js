@@ -30,6 +30,7 @@
       { id: 'B-JOURNAL', group: 'Mission B', label: 'Journal de production (6 lots, T et t ensemble)', design: d('DIAG6'), model: 'lineaire', world: 'A', code: 'JOURNAL', seed: S.journalSeed,
         note: 'Avec le monde « laboratoire A » (code ROUGE), σ = 1,5 et la graine 2024, l\'onglet 3 reproduit exactement les rendements du journal (arrondis au dixième dans M1).' },
       { id: 'B-DECOUPLE', group: 'Mission B', label: 'Journal + un essai découplé (60 °C ; 1 h)', design: d('DIAG6P'), model: 'lineaire', code: 'DECOUPLE' },
+      { id: 'C-REGRESS', group: 'Mission C', label: 'Régression guidée (4 mesures, sans bruit)', design: d('FACT4'), model: 'lineaire', world: 'A', sigma: 0, seed: 1, code: 'MATRICE' },
       { id: 'C-P1', group: 'Mission C', label: 'P1 journal (6)', design: d('DIAG6'), model: 'lineaire', code: 'MATRICE' },
       { id: 'C-P2', group: 'Mission C', label: 'P2 un facteur à la fois (3)', design: d('OFAT3'), model: 'lineaire', code: 'MATRICE' },
       { id: 'C-P3', group: 'Mission C', label: 'P3 un facteur à la fois dupliqué (6)', design: d('OFAT6'), model: 'lineaire', code: 'MATRICE' },

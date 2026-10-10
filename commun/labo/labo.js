@@ -51,7 +51,7 @@
     S.model = p.model || S.model;
     S.constraint = p.constraint || null;
     if (p.world && isUnlocked(CFG.worlds[p.world] && CFG.worlds[p.world].code)) S.world = p.world;
-    if (p.sigma !== undefined) S.sigma = p.sigma;
+    S.sigma = p.sigma !== undefined ? p.sigma : null;
     if (p.seed !== undefined) S.seed = p.seed;
     resetRun(); renderAll();
   }
@@ -271,6 +271,18 @@
       omitted(w, T) ? h('div', { class: 'warn' }, 'Attention : le monde simulé contient des termes absents du modèle ajusté (', omitted(w, T), '). Les coefficients peuvent être biaisés.') : null),
       h('div', {}, bars, h('p', { class: 'note' }, 'Barres : estimation ; traits : ± 2 écarts-types.'))));
     sec.append(fitCard);
+    const regressionRows = h('table', { class: 'data' }, h('tr', {},
+      ...['Essai', 'Mesure y', 'Prévision ŷ', 'Résidu y − ŷ'].map(label => h('th', {}, label))));
+    y.forEach((value, i) => regressionRows.append(h('tr', {},
+      ...[i + 1, fmt(value), fmt(f.fitted[i]), fmt(f.resid[i])].map(value => h('td', {}, value)))));
+    const xty = D.matvec(D.transpose(f.X), y);
+    sec.append(h('div', { class: 'card' }, h('h2', {}, 'Régression : des mesures aux prévisions'),
+      h('p', {}, 'Nous connaissons les réglages X et les mesures y. La régression cherche les coefficients qui minimisent la somme des carrés des résidus.'),
+      h('p', {}, 'Quand les colonnes de X sont indépendantes : β̂ = (XᵀX)⁻¹Xᵀy. Puis ŷ = Xβ̂ et r = y − ŷ.'),
+      h('div', { class: 'grid2' },
+        h('div', { class: 'scroll' }, matrix('Xᵀy =', xty.map(v => [v])), matrix('β̂ =', f.beta.map(v => [v]))),
+        h('div', { class: 'scroll' }, regressionRows)),
+      h('p', {}, `Somme des carrés des résidus (SCR) = ${fmt(f.sse)}. Un résidu est un écart observé ; il ne provient pas nécessairement du seul bruit de mesure.`)));
     P.coefBars(bars, { names: T.map(coefName), values: f.beta, se, color: 'var(--s1)' });
 
     // Diagramme d'interaction (2 facteurs, 4 sommets présents)
@@ -374,7 +386,7 @@
   if (qp.get('code')) qp.get('code').split(',').forEach(c => { const u = c.trim().toUpperCase(); if (CFG.codes[u]) S.unlocked.add(u); if (u === (CFG.teacherCode || 'MENTOR')) S.prof = true; });
   persist();
   loadPreset(qp.get('preset') || CFG.startPreset);
-  if (qp.get('monde') && CFG.worlds[qp.get('monde')] && isUnlocked(CFG.worlds[qp.get('monde')].code)) { S.world = qp.get('monde'); S.sigma = null; }
+  if (qp.get('monde') && CFG.worlds[qp.get('monde')] && isUnlocked(CFG.worlds[qp.get('monde')].code)) { if (S.world !== qp.get('monde')) S.sigma = null; S.world = qp.get('monde'); }
   // Démonstration enseignant : ?valider réalise les essais sans saisie de prédictions (mode enseignant uniquement)
   if (qp.has('valider') && S.prof) { S.preds = S.design.map(() => '0'); S.validated = true; }
   renderAll();
