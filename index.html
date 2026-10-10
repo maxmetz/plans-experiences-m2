@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plans d'expériences — M2 Instrumentation</title>
+<style>
+  :root { color-scheme: light; --bg: #f6f5f2; --card: #fff; --ink: #1b1b1a; --muted: #5a5955; --line: #dcdad4; --brand: #1f4e79; --brand-soft: #e8f0f8; --accent: #b5591b; }
+  @media (prefers-color-scheme: dark) {
+    :root { color-scheme: dark; --bg: #18191b; --card: #222326; --ink: #ecebe7; --muted: #b3b1aa; --line: #3a3b3e; --brand: #8fb8e3; --brand-soft: #22303f; --accent: #e8955a; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+  header { background: #1f4e79; color: #fff; padding: 40px 20px 34px; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+  header .wrap { padding: 0; }
+  header p { margin: 6px 0 0; color: #d6e3f0; max-width: 680px; }
+  h1 { margin: 0; font-size: clamp(26px, 4vw, 36px); line-height: 1.2; }
+  h2 { font-size: 22px; margin: 36px 0 6px; color: var(--brand); }
+  .lead { color: var(--muted); margin: 0 0 18px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; }
+  .card h3 { margin: 0 0 6px; font-size: 18px; }
+  .card p { margin: 0 0 14px; color: var(--muted); font-size: 15px; flex: 1; }
+  .card a.btn { align-self: flex-start; background: var(--brand); color: var(--card); text-decoration: none; padding: 8px 14px; border-radius: 8px; font-weight: 600; }
+  .card ul { margin: 0; padding-left: 18px; }
+  .card li { margin: 4px 0; }
+  a { color: var(--brand); }
+  .later { opacity: .65; }
+  .note { background: var(--brand-soft); border-radius: 10px; padding: 12px 16px; margin-top: 28px; font-size: 15px; }
+  footer { color: var(--muted); font-size: 13px; padding: 30px 0 40px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Plans d'expériences</h1>
+    <p>Master 2 Instrumentation et sciences analytiques, Aix-Marseille Université. Quatre séances pour apprendre à choisir ses essais, à les analyser et à justifier ses conclusions.</p>
+  </div>
+</header>
+<main class="wrap">
+  <h2>Séance 1 — Pourquoi toutes les expériences ne se valent-elles pas ?</h2>
+  <p class="lead">Faire varier un facteur à la fois, interactions, confusion des effets, rang et identifiabilité, précision des coefficients.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Laboratoire interactif</h3>
+      <p>Choisir des essais, simuler des mesures, construire la matrice X, calculer son rang, XᵀX et la précision des coefficients, comparer deux plans. Certaines fonctions s'ouvrent avec les codes donnés en séance.</p>
+      <a class="btn" href="session_01/simulations/index.html">Ouvrir le laboratoire</a>
+    </div>
+    <div class="card">
+      <h3>Fascicules et livret</h3>
+      <p>Les fondements mathématiques sont à lire avant la séance (sections 1 à 6).</p>
+      <ul>
+        <li><a href="session_01/documents/F0_fondements_mathematiques.pdf">F0 — Fondements mathématiques</a></li>
+        <li><a href="session_01/documents/F1_strategie_experimentale.pdf">F1 — Concevoir une stratégie expérimentale</a></li>
+        <li><a href="session_01/documents/M1_livret_missions.pdf">M1 — Livret des missions</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Diapositives</h3>
+      <p>Support projeté pendant la séance. Navigation au clavier : flèches pour avancer, F pour le plein écran, H pour l'aide.</p>
+      <a class="btn" href="session_01/slides/S1_slides.html">Voir les diapositives</a>
+    </div>
+  </div>
+
+  <h2 class="later">Séances 2 à 4</h2>
+  <p class="lead later">Criblage et matrices d'Hadamard ; plans factoriels et interactions ; surfaces de réponse et optimisation. Les supports seront ajoutés au fil du module.</p>
+
+  <div class="note">Ces pages fonctionnent sans compte et sans connexion une fois téléchargées : il suffit d'ouvrir les fichiers HTML dans un navigateur récent.</div>
+</main>
+<footer class="wrap">Aix-Marseille Université — module Plans d'expériences. Équations rendues avec KaTeX (licence MIT).</footer>
+</body>
+</html>

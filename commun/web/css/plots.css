@@ -1,0 +1,31 @@
+/* plots.css — styles des graphiques SVG (palette catégorielle validée : dataviz, slots 1-4) */
+:root {
+  --s1: #2a78d6; /* bleu  : laboratoire A / plan 1 */
+  --s2: #eb6834; /* orange : laboratoire B / plan 2 */
+  --s3: #1baf7a; /* aqua   : plan 3 */
+  --s4: #6250d6; /* violet : plan 4 / monde simulé */
+  --ink: #1b1b1a; --muted: #5a5955; --grid: #e6e5e1; --axis: #8a8984;
+  --forbid: rgba(235, 104, 52, .16);
+}
+svg.plot { width: 100%; height: auto; display: block; font-family: inherit; color: var(--ink); overflow: visible; }
+svg.plot .grid { stroke: var(--grid); stroke-width: 1; }
+svg.plot .axis { stroke: var(--axis); stroke-width: 1.2; }
+svg.plot .tick { fill: var(--muted); font-size: 12px; }
+svg.plot .label { fill: var(--muted); font-size: 13px; }
+svg.plot .val { fill: var(--ink); font-size: 13px; font-weight: 600; }
+svg.plot .val.big { font-size: 18px; }
+svg.plot .direct { font-size: 13px; font-weight: 600; }
+svg.plot .rep { fill: var(--ink); font-size: 13px; font-weight: 700; }
+svg.plot .series-line { fill: none; stroke-width: 2.5; }
+svg.plot .marker { stroke: #fff; stroke-width: 2; }
+svg.plot .marker:hover, svg.plot .design-pt:hover, svg.plot .bar:hover { filter: brightness(1.15); }
+svg.plot .domain { fill: none; stroke: var(--axis); stroke-width: 1.5; }
+svg.plot .forbidden { fill: var(--forbid); stroke: var(--s2); stroke-width: 2; }
+svg.plot .nullline { stroke: var(--s4); stroke-width: 2; stroke-dasharray: 6 5; }
+svg.plot .design-pt { stroke: #fff; stroke-width: 2.5; }
+svg.plot .arrow { stroke-width: 3; }
+svg.plot .cloud-pt { opacity: .35; }
+svg.plot .ellipse { fill: none; stroke-width: 2.5; }
+svg.plot .truth { stroke: var(--muted); stroke-dasharray: 3 4; stroke-width: 1; }
+svg.plot .bar { stroke: none; }
+svg.plot .errbar { stroke: var(--ink); stroke-width: 1.5; }

@@ -1,0 +1,122 @@
+/* deck.css — mise en forme des présentations (projection 16:9, 1600×900, thème clair pour vidéoprojecteur) */
+:root {
+  color-scheme: light;
+  --bg: #ffffff; --ink: #1b1b1a; --muted: #5a5955; --line: #dcdad4;
+  --brand: #1f4e79; --brand-soft: #e8f0f8; --accent: #b5591b; --accent-soft: #fbefe6;
+  --good: #2e6b3a; --good-soft: #eaf4ec; --violet: #5b3f8c; --violet-soft: #f1ecf8;
+  --font: "Segoe UI", "Helvetica Neue", Arial, "Liberation Sans", sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: #26262a; font-family: var(--font); color: var(--ink); overflow: hidden; }
+.deck { position: absolute; left: 50%; top: 50%; width: 1600px; height: 900px; transform: translate(-50%, -50%) scale(var(--k, 1)); }
+.slide { position: absolute; inset: 0; background: var(--bg); padding: 56px 80px 64px; display: none; flex-direction: column; overflow: hidden; }
+.slide.active { display: flex; }
+.slide-foot { position: absolute; left: 80px; right: 80px; bottom: 18px; display: flex; justify-content: space-between; font-size: 16px; color: var(--muted); }
+
+/* Typographie */
+.slide h1 { font-size: 64px; line-height: 1.08; margin: 0 0 24px; color: var(--brand); letter-spacing: -.5px; }
+.slide h2 { font-size: 46px; line-height: 1.12; margin: 0 0 22px; color: var(--brand); letter-spacing: -.3px; }
+.slide h3 { font-size: 30px; margin: 0 0 12px; color: var(--ink); }
+.slide p, .slide li { font-size: 30px; line-height: 1.35; }
+.slide ul, .slide ol { margin: 6px 0; padding-left: 38px; }
+.slide li { margin: 6px 0; }
+.small, .slide .small p, .slide .small li { font-size: 22px; }
+.muted { color: var(--muted); }
+.kicker { font-size: 22px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+.big { font-size: 40px; font-weight: 600; }
+.center { text-align: center; }
+.src { font-size: 15px; color: var(--muted); margin-top: auto; padding-top: 8px; }
+
+/* Mise en page */
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; flex: 1; min-height: 0; }
+.cols.c3 { grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+.cols.wide-left { grid-template-columns: 1.35fr 1fr; }
+.cols.wide-right { grid-template-columns: 1fr 1.35fr; }
+.stack > * + * { margin-top: 18px; }
+.fill { flex: 1; min-height: 0; }
+
+/* Boîtes */
+.box { border-radius: 12px; padding: 20px 26px; border-left: 8px solid var(--brand); background: var(--brand-soft); }
+.box.accent { border-color: var(--accent); background: var(--accent-soft); }
+.box.good { border-color: var(--good); background: var(--good-soft); }
+.box.violet { border-color: var(--violet); background: var(--violet-soft); }
+.box.plain { background: #f6f5f2; border-color: var(--line); }
+.box h3 { margin-top: 0; }
+.box p, .box li { font-size: 26px; }
+.question { font-size: 44px; font-weight: 650; line-height: 1.2; color: var(--ink); border-left: 10px solid var(--accent); padding: 8px 0 8px 28px; margin: 8px 0 26px; }
+.role { border: 3px solid var(--brand); border-radius: 14px; padding: 18px 24px; }
+.role.b { border-color: var(--accent); }
+.role h3 { font-size: 30px; }
+.tag { display: inline-block; font-size: 20px; font-weight: 700; padding: 4px 14px; border-radius: 999px; background: var(--brand); color: #fff; margin-right: 8px; vertical-align: middle; }
+.tag.accent { background: var(--accent); } .tag.good { background: var(--good); } .tag.violet { background: var(--violet); }
+.timeline { display: flex; gap: 10px; margin: 10px 0; }
+.timeline div { flex: 1; background: #f3f2ee; border-radius: 10px; padding: 12px 14px; font-size: 21px; }
+.timeline div b { display: block; font-size: 24px; color: var(--brand); }
+
+/* Tableaux */
+table.t { border-collapse: collapse; font-size: 26px; }
+table.t th, table.t td { padding: 8px 18px; border-bottom: 1px solid var(--line); text-align: center; }
+table.t th { color: var(--muted); font-weight: 600; font-size: 22px; }
+table.t td:first-child, table.t th:first-child { text-align: left; }
+table.t tr.hl td { background: #fff6d6; font-weight: 700; }
+.num { font-variant-numeric: tabular-nums; }
+.ok { color: var(--good); font-weight: 700; } .ko { color: var(--accent); font-weight: 700; }
+
+/* Fragments (révélations) */
+.frag { opacity: 0; transform: translateY(8px); transition: opacity .35s, transform .35s; }
+.frag.shown { opacity: 1; transform: none; }
+.frag.mask:not(.shown) { opacity: 1; filter: blur(14px); }
+.frag.dim.shown ~ .dimmable { opacity: .35; }
+
+/* Graphiques */
+.chart { width: 100%; }
+.chart svg.plot { max-height: var(--h, 520px); }
+.chart svg.plot .tick { font-size: 15px; } .chart svg.plot .label { font-size: 16px; }
+.chart svg.plot .val { font-size: 16px; } .chart svg.plot .direct { font-size: 17px; }
+.legend { display: flex; gap: 26px; font-size: 22px; margin: 4px 0 8px; flex-wrap: wrap; }
+.legend span::before { content: ""; display: inline-block; width: 26px; height: 6px; border-radius: 3px; background: var(--c); vertical-align: middle; margin-right: 8px; }
+figure { margin: 0; } figcaption { font-size: 16px; color: var(--muted); margin-top: 6px; }
+img.orig { max-width: 100%; max-height: 520px; border: 1px solid var(--line); border-radius: 6px; }
+
+/* Équations */
+.eq { font-size: 34px; margin: 14px 0; }
+.eq-big { font-size: 46px; margin: 18px 0; text-align: center; }
+.katex { font-size: 1.05em; }
+
+/* Couverture */
+.slide.cover { background: linear-gradient(135deg, #1f4e79 0%, #163a5a 100%); color: #fff; justify-content: center; }
+.slide.cover h1 { color: #fff; font-size: 76px; } .slide.cover p { color: #dce8f3; }
+.slide.cover .slide-foot { color: #9fb8cf; }
+.slide.section { background: #f6f5f2; }
+
+/* Chrome : minuteur, notes, aide */
+#deck-timer { position: fixed; top: 14px; right: 18px; font: 700 26px var(--font); background: rgba(31,78,121,.92); color: #fff; padding: 6px 16px; border-radius: 10px; z-index: 20; }
+#deck-timer.warn { background: #b5591b; } #deck-timer.done { background: #8b1d1d; animation: blink 1s infinite; }
+@keyframes blink { 50% { opacity: .45; } }
+#deck-notes { position: fixed; left: 0; right: 0; bottom: 0; max-height: 38vh; overflow: auto; background: #fffbe8; border-top: 3px solid #b5591b; padding: 12px 22px; font-size: 17px; line-height: 1.4; z-index: 30; }
+#deck-help { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #fff; padding: 24px 32px; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,.4); z-index: 40; font-size: 17px; }
+#deck-help td { padding: 3px 12px; } #deck-help td:first-child { font-weight: 700; }
+#deck-black { position: fixed; inset: 0; background: #000; z-index: 50; }
+aside.notes { display: none; }
+
+/* Vue d'ensemble */
+body.overview { overflow: auto; }
+body.overview .deck { position: static; transform: none; width: auto; height: auto; display: grid; grid-template-columns: repeat(4, 400px); gap: 16px; padding: 20px; justify-content: center; }
+body.overview .slide { display: flex; position: relative; width: 1600px; height: 900px; transform: scale(.25); transform-origin: 0 0; margin-bottom: -675px; margin-right: -1200px; cursor: pointer; outline: 6px solid transparent; }
+body.overview .slide.active { outline-color: #eb6834; }
+body.overview .frag { opacity: 1; transform: none; filter: none; }
+
+/* Impression / export PDF : une diapositive par page */
+body.print { overflow: visible; background: #fff; }
+body.print .deck { position: static; transform: none; width: 1600px; height: auto; }
+body.print .slide { display: flex; position: relative; width: 1600px; height: 900px; page-break-after: always; break-after: page; }
+body.print .frag { opacity: 1; transform: none; filter: none; }
+body.print #deck-timer { display: none; }
+@media print {
+  @page { size: 1600px 900px; margin: 0; }
+  html, body { background: #fff; overflow: visible; height: auto; }
+  .deck { position: static !important; transform: none !important; }
+  .slide { display: flex !important; position: relative !important; page-break-after: always; break-after: page; }
+  .frag { opacity: 1 !important; transform: none !important; filter: none !important; }
+  #deck-timer, #deck-notes, #deck-help, #deck-black { display: none !important; }
+}
