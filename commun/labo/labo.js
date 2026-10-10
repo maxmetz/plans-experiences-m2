@@ -123,6 +123,28 @@
       S.preset && CFG.presets.find(p => p.id === S.preset).note ? h('div', { class: 'info' }, CFG.presets.find(p => p.id === S.preset).note) : null,
       S.constraint ? h('div', { class: 'warn' }, 'Contrainte active : ' + S.constraint.label) : null));
 
+    // Expliquer les comparaisons sur le plan courant, même après modification.
+    if (k() === 2) {
+      const has = (a, b) => S.design.some(x => x[0] === a && x[1] === b);
+      if (has(-1, -1) && has(1, -1) && has(-1, 1)) {
+        const condition = (a, b) => `${realVal(0, a)} ${S.factors[0].unit} ; ${realVal(1, b)} ${S.factors[1].unit}`;
+        const factorial = has(1, 1);
+        const comparisons = h('table', { class: 'data' }, h('tr', {},
+          ...['Comparaison à faire', 'Ce qui change', 'Ce qui reste constant'].map(s => h('th', {}, s))),
+          h('tr', {}, h('td', {}, `${condition(-1, -1)} → ${condition(1, -1)}`), h('td', {}, S.factors[0].label), h('td', {}, `${S.factors[1].label} : ${realVal(1, -1)} ${S.factors[1].unit}`)),
+          h('tr', {}, h('td', {}, `${condition(-1, -1)} → ${condition(-1, 1)}`), h('td', {}, S.factors[1].label), h('td', {}, `${S.factors[0].label} : ${realVal(0, -1)} ${S.factors[0].unit}`)));
+        sec.append(h('div', { class: 'card' },
+          h('h2', {}, factorial ? 'Quatre combinaisons : comparer aussi depuis l’autre niveau' : 'Comprendre « un facteur à la fois »'),
+          h('p', {}, `Notre référence commune : ${condition(-1, -1)}. On réalise un autre essai en changeant seulement un réglage par rapport à cette référence.`),
+          h('div', { class: 'scroll' }, comparisons),
+          h('p', {}, 'Dans le plan initial à trois essais, comparez les essais 1 et 2, puis 1 et 3. Entre 2 et 3, les deux réglages changent : cette comparaison ne sépare pas leurs effets. Les numéros des lignes ne prescrivent pas l’ordre de passage sur l’appareil.'),
+          h('div', { class: 'info' }, factorial
+            ? `Le point ${condition(1, 1)} est présent : on peut comparer l’effet du premier facteur aux deux niveaux du second. C’est ce qui permet d’étudier l’interaction.`
+            : `Vérifiez le tableau : le point ${condition(1, 1)} manque. Ces trois conditions ne montrent pas si l’effet du premier facteur change au niveau haut du second. Pour prévoir ce point en additionnant les gains, il faut supposer l’absence d’interaction.`),
+          h('p', { class: 'note' }, 'Avant de simuler : pointez la référence, puis expliquez chaque comparaison avec les unités réelles. Les répétitions éventuelles donnent plusieurs mesures des mêmes conditions.')));
+      }
+    }
+
     // Facteurs
     const ft = h('table', { class: 'data' }, h('tr', {}, h('th', { class: 'l' }, 'Facteur'), h('th', {}, 'Nom court'), h('th', {}, 'Unité'), h('th', {}, 'Niveau −1'), h('th', {}, 'Niveau +1'), h('th', {}, 'Centre'), h('th', {}, 'Pas')));
     S.factors.forEach((f, j) => {
