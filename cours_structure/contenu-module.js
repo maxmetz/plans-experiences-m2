@@ -121,7 +121,7 @@ window.CoursData = {
     {
       "chapter": "effets",
       "title": "Coefficient codé et changement entre deux niveaux",
-      "body": "<div class=\"eq\">\\[b_j=\\frac{\\bar y_{j+}-\\bar y_{j-}}2,\\qquad\\Delta_j=\\bar y_{j+}-\\bar y_{j-}=2b_j\\]</div><p>Le support historique appelle souvent bⱼ « effet ». Nous distinguons ici coefficient codé bⱼ et différence entre niveaux Δⱼ.</p><div class=\"frag\"><p>Une différence de 14 points entre x = −1 et x = +1 correspond à b = 7 points par unité codée.</p></div>",
+      "body": "<div class=\"eq\">\\[b_j=\\frac{\\bar y_{j+}-\\bar y_{j-}}2,\\qquad\\Delta_j=\\bar y_{j+}-\\bar y_{j-}=2b_j\\]</div><p>Distinguer le coefficient codé bⱼ de la différence entre niveaux Δⱼ = 2bⱼ.</p><div class=\"frag\"><p>Une différence de 14 points entre x = −1 et x = +1 correspond à b = 7 points par unité codée.</p></div>",
       "source": "cours1.pdf, p. 16 ; Factorielle_procédé.pptx, d6"
     },
     {
@@ -145,7 +145,7 @@ window.CoursData = {
     {
       "chapter": "effets",
       "title": "Lire les effets avec la figure d’origine",
-      "body": "<figure><img src=\"figures/INTRO_d28_image19.png\" alt=\"Coefficients du procédé de soudure\" loading=\"eager\"><figcaption>Coefficients du procédé de soudure · Figure : Michelle Sergent (AMU), Master Instrum_Intro + Criblage.pptx, d28.</figcaption></figure><p>Un signe positif indique une augmentation de la réponse, pas nécessairement une amélioration du procédé.</p>",
+      "body": "<figure><img src=\"figures/INTRO_d28_image19.png\" alt=\"Coefficients du procédé de soudure\" loading=\"eager\"><figcaption>Coefficients du procédé de soudure</figcaption></figure><p>Un signe positif indique une augmentation de la réponse, pas nécessairement une amélioration du procédé.</p>",
       "source": "Figure originale conservée"
     },
     {
@@ -343,7 +343,7 @@ window.CoursData = {
     {
       "chapter": "criblage",
       "title": "Hadamard et Plackett–Burman",
-      "body": "<div class=\"eq\">\\[H^TH=NI\\]</div><p>Une colonne constante et des colonnes équilibrées de ±1 donnent un calcul de contrastes simple. Les générateurs cycliques historiques sont conservés dans les planches.</p><div class=\"frag\"><p>Un plan saturé pour les effets principaux n’offre pas de degrés de liberté résiduels. Il ne permet pas de contrôler les interactions laissées hors modèle.</p></div>",
+      "body": "<div class=\"eq\">\\[H^TH=NI\\]</div><p>Une colonne constante et des colonnes équilibrées de ±1 donnent un calcul de contrastes simple. Les lignes génératrices permettent de construire les plans par permutations circulaires.</p><div class=\"frag\"><p>Un plan saturé pour les effets principaux n’offre pas de degrés de liberté résiduels. Il ne permet pas de contrôler les interactions laissées hors modèle.</p></div>",
       "source": "cours1.pdf, p. 33–44"
     },
     {
@@ -355,13 +355,13 @@ window.CoursData = {
     {
       "chapter": "criblage",
       "title": "Dispersion et décision statistique",
-      "body": "<div class=\"eq\">\\[\\hat\\sigma^2=\\frac{\\mathrm{SCR}}{N-p},\\quad\\mathrm{SE}(\\hat b_j)=\\sqrt{\\hat\\sigma^2[(X^TX)^{-1}]_{jj}}\\]</div><div class=\"eq\">\\[\\hat b_j\\pm t_{1-\\alpha/2;\\nu}\\,\\mathrm{SE}(\\hat b_j)\\]</div><p>Pour une inférence exacte de Student : modèle correct, erreurs normales indépendantes de variance commune et estimation de variance adaptée. Avec des répétitions, l’erreur pure peut être estimée séparément.</p><p>La notation bilatérale correcte à 5 % est t₀,₉₇₅;ν, même lorsque l’original abrège « t₀,₉₅ ».</p>",
+      "body": "<div class=\"eq\">\\[\\hat\\sigma^2=\\frac{\\mathrm{SCR}}{N-p},\\quad\\mathrm{SE}(\\hat b_j)=\\sqrt{\\hat\\sigma^2[(X^TX)^{-1}]_{jj}}\\]</div><div class=\"eq\">\\[\\hat b_j\\pm t_{1-\\alpha/2;\\nu}\\,\\mathrm{SE}(\\hat b_j)\\]</div><p>Pour une inférence exacte de Student : modèle correct, erreurs normales indépendantes de variance commune et estimation de variance adaptée. Avec des répétitions, l’erreur pure peut être estimée séparément.</p><p>Pour un risque bilatéral de 5 %, utiliser le quantile t₀,₉₇₅;ν.</p>",
       "source": "cours1.pdf, p. 61–66 ; correction de notation, sans modification des originaux"
     },
     {
       "chapter": "criblage",
       "title": "Pareto, normal plot et half-normal plot",
-      "body": "<p>Pareto ordonne les amplitudes des coefficients. Les graphiques normal et half-normal comparent leur répartition à une distribution de référence.</p><div class=\"frag\"><p>Un coefficient visuellement isolé est un candidat actif. Ces diagnostics reposent sur la parcimonie ; ils ne démontrent pas une causalité ni l’absence d’interaction.</p></div><p>Les figures originales des cas céramique et des réponses multiples sont accessibles dans les planches du chapitre.</p>",
+      "body": "<p>Pareto ordonne les amplitudes des coefficients. Les graphiques normal et half-normal comparent leur répartition à une distribution de référence.</p><div class=\"frag\"><p>Un coefficient visuellement isolé est un candidat actif. Ces diagnostics reposent sur la parcimonie ; ils ne démontrent pas une causalité ni l’absence d’interaction.</p></div><p>Comparer les diagnostics pour chaque réponse étudiée.</p>",
       "source": "cours1.pdf, p. 67–87"
     },
     {
@@ -385,13 +385,13 @@ window.CoursData = {
     {
       "chapter": "niveaux",
       "title": "Décompter les informations avant la construction",
-      "body": "<div class=\"eq\">\\[p=1+\\sum_j(s_j-1),\\qquad N\\ge p\\]</div><p>Têtes de forage : quatre facteurs à deux niveaux, un à trois niveaux et un à quatre niveaux.</p><div class=\"frag\"><div class=\"eq\">\\[p=1+4(2-1)+(3-1)+(4-1)=10\\]</div></div><p>Le décompte est 10, puis une construction à 16 essais est retenue. La mention « ≥ 11 » sur une planche historique est une coquille, pas un autre calcul.</p>",
+      "body": "<div class=\"eq\">\\[p=1+\\sum_j(s_j-1),\\qquad N\\ge p\\]</div><p>Têtes de forage : quatre facteurs à deux niveaux, un à trois niveaux et un à quatre niveaux.</p><div class=\"frag\"><div class=\"eq\">\\[p=1+4(2-1)+(3-1)+(4-1)=10\\]</div></div><p>Le décompte est 10, puis une construction à 16 essais est retenue. Le modèle comporte dix coefficients ; la construction retenue comporte seize essais.</p>",
       "source": "Cours 2.pdf, p. 37–45"
     },
     {
       "chapter": "niveaux",
       "title": "Plans symétriques : équilibre entre niveaux",
-      "body": "<div class=\"eq\">\\[s^k//N\\]</div><p>Notation historique : k facteurs à s niveaux dans N essais. Les tableaux orthogonaux équilibrent les niveaux et leurs associations selon leur force.</p><p>Pour un modèle à effets principaux, il faut vérifier les colonnes de sa matrice, pas seulement compter N. Les constructions par permutations et arithmétique modulaire sont conservées intégralement dans les planches.</p>",
+      "body": "<div class=\"eq\">\\[s^k//N\\]</div><p>Notation : k facteurs à s niveaux dans N essais. Les tableaux orthogonaux équilibrent les niveaux et leurs associations selon leur force.</p><p>Pour un modèle à effets principaux, il faut vérifier les colonnes de sa matrice, pas seulement compter N. Les plans se construisent notamment par permutations et arithmétique modulaire.</p>",
       "source": "Cours 2.pdf, p. 11–24"
     },
     {
@@ -403,7 +403,7 @@ window.CoursData = {
     {
       "chapter": "niveaux",
       "title": "Du tableau de niveaux au plan réel",
-      "body": "<table class=\"annotated-matrix\"><thead><tr><th>Facteur du cas forage</th><th>Niveaux historiques</th></tr></thead><tbody><tr><td>Type de tête</td><td>Neuf ; récupéré</td></tr><tr><td>Taille</td><td>0,125 ; 0,25 mm</td></tr><tr><td>Vitesse</td><td>400 ; 800 tr/min</td></tr><tr><td>Matériel</td><td>Mou ; dur</td></tr><tr><td>Usine</td><td>Chicago ; Kansas ; Miami</td></tr><tr><td>Opérateur</td><td>A ; B ; C ; D</td></tr></tbody></table><p>Le code d’un niveau est une étiquette. Traduire chaque ligne en conditions réelles avant de réaliser les essais.</p>",
+      "body": "<table class=\"annotated-matrix\"><thead><tr><th>Facteur du cas forage</th><th>Niveaux</th></tr></thead><tbody><tr><td>Type de tête</td><td>Neuf ; récupéré</td></tr><tr><td>Taille</td><td>0,125 ; 0,25 mm</td></tr><tr><td>Vitesse</td><td>400 ; 800 tr/min</td></tr><tr><td>Matériel</td><td>Mou ; dur</td></tr><tr><td>Usine</td><td>Chicago ; Kansas ; Miami</td></tr><tr><td>Opérateur</td><td>A ; B ; C ; D</td></tr></tbody></table><p>Le code d’un niveau est une étiquette. Traduire chaque ligne en conditions réelles avant de réaliser les essais.</p>",
       "source": "Cours 2.pdf, p. 38, 45–47"
     },
     {
@@ -432,8 +432,8 @@ window.CoursData = {
     },
     {
       "chapter": "factoriel",
-      "title": "Sécheur : lire l’interaction avec la figure originale",
-      "body": "<figure><img src=\"figures/FACT_d36_image16.png\" alt=\"Interaction pression–température\" loading=\"eager\"><figcaption>Interaction pression–température · Figure : Michelle Sergent (AMU), Factorielle_procédé.pptx, d36.</figcaption></figure><p>Le gain de pression change selon la température. La source emploie ppm puis % pour la réponse : conserver les valeurs, mais confirmer l’unité avant une interprétation physique.</p>",
+      "title": "Sécheur : interpréter l’interaction",
+      "body": "<figure><img src=\"figures/FACT_d36_image16.png\" alt=\"Interaction pression–température\" loading=\"eager\"><figcaption>Interaction pression–température</figcaption></figure><p>Le gain de pression change selon la température. L’unité de la réponse doit être confirmée avant toute interprétation physique ou conversion.</p>",
       "source": "cours 3.pdf, p. 17, 23, 35–36"
     },
     {
@@ -463,7 +463,7 @@ window.CoursData = {
     {
       "chapter": "surfaces",
       "title": "Surface et contours : deux lectures du même modèle",
-      "body": "<figure><img src=\"figures/SURF_d26_image7.png\" alt=\"Représentation historique du modèle\" loading=\"eager\"><figcaption>Représentation historique du modèle · Figure : Michelle Sergent (AMU), Master Instrum_Surfaces de réponse.pptx, d26.</figcaption></figure><p>Une courbe de niveau rassemble des réglages donnant la même réponse prévue. L’orientation et la courbure traduisent des coefficients ; la validité reste expérimentale.</p>",
+      "body": "<figure><img src=\"figures/SURF_d26_image7.png\" alt=\"Surface de réponse\" loading=\"eager\"><figcaption>Surface de réponse</figcaption></figure><p>Une courbe de niveau rassemble des réglages donnant la même réponse prévue. L’orientation et la courbure traduisent des coefficients ; la validité reste expérimentale.</p>",
       "source": "cours 4.pdf"
     },
     {
@@ -499,13 +499,13 @@ window.CoursData = {
     {
       "chapter": "td",
       "title": "TD factoriel : interpréter les coefficients",
-      "body": "<figure><img src=\"figures/TDFACT_image1.png\" alt=\"Graphe original des coefficients de diffusion\" loading=\"eager\"><figcaption>Graphe original des coefficients de diffusion · Figure : Michelle Sergent (AMU), TD Factorielle.docx.</figcaption></figure><div class=\"eq\">\\[\\hat b_0=2{,}58125,\\quad\\hat b_1=-0{,}725,\\quad\\hat b_2=-0{,}425,\\quad\\hat b_{24}=0{,}40625\\]</div><p>La température et le prépolymère interagissent : une recommandation doit examiner les combinaisons. Les valeurs sont des coefficients codés, pas des différences entières entre niveaux.</p>",
+      "body": "<figure><img src=\"figures/TDFACT_image1.png\" alt=\"Coefficients de diffusion\" loading=\"eager\"><figcaption>Coefficients de diffusion</figcaption></figure><div class=\"eq\">\\[\\hat b_0=2{,}58125,\\quad\\hat b_1=-0{,}725,\\quad\\hat b_2=-0{,}425,\\quad\\hat b_{24}=0{,}40625\\]</div><p>La température et le prépolymère interagissent : une recommandation doit examiner les combinaisons. Les valeurs sont des coefficients codés, pas des différences entières entre niveaux.</p>",
       "source": "TD Factorielle.docx/xlsx ; calculs vérifiés"
     },
     {
       "chapter": "td",
       "title": "TD Hadamard : vitesse de dépôt électrolytique",
-      "body": "<p>Neuf facteurs : température, pH, or, agitation, cobalt, courant, position, additif et surface. Réponse : vitesse de dépôt (mg/min).</p><p>Données, dans l’ordre de la matrice historique : 101,8 ; 71,2 ; 91,3 ; 114,1 ; 43,8 ; 105,5 ; 145,0 ; 56,1 ; 30,6 ; 50,0 ; 97,3 ; 52,4.</p><div class=\"eq\">\\[N=12,\\quad X^TX=12I_{10}\\]</div><p>Dix colonnes pour la constante et les neuf facteurs. Les deux degrés de liberté résiduels ne garantissent pas à eux seuls que les interactions sont négligeables.</p>",
+      "body": "<p>Neuf facteurs : température, pH, or, agitation, cobalt, courant, position, additif et surface. Réponse : vitesse de dépôt (mg/min).</p><p>Données, dans l’ordre de la matrice : 101,8 ; 71,2 ; 91,3 ; 114,1 ; 43,8 ; 105,5 ; 145,0 ; 56,1 ; 30,6 ; 50,0 ; 97,3 ; 52,4.</p><div class=\"eq\">\\[N=12,\\quad X^TX=12I_{10}\\]</div><p>Dix colonnes pour la constante et les neuf facteurs. Les deux degrés de liberté résiduels ne garantissent pas à eux seuls que les interactions sont négligeables.</p>",
       "source": "TD Hadamard.docx/xlsx"
     },
     {
@@ -516,8 +516,8 @@ window.CoursData = {
     },
     {
       "chapter": "td",
-      "title": "TD Hadamard : conserver la lecture graphique originale",
-      "body": "<figure><img src=\"figures/TDHAD_image2.png\" alt=\"Graphe original des coefficients du dépôt\" loading=\"eager\"><figcaption>Graphe original des coefficients du dépôt · Figure : Michelle Sergent (AMU), TD Hadamard.docx.</figcaption></figure><p>Le graphique aide à comparer les amplitudes. Il ne remplace ni les hypothèses de criblage, ni une validation des conditions retenues.</p>",
+      "title": "TD Hadamard : interpréter les coefficients",
+      "body": "<figure><img src=\"figures/TDHAD_image2.png\" alt=\"Coefficients de vitesse de dépôt\" loading=\"eager\"><figcaption>Coefficients de vitesse de dépôt</figcaption></figure><p>Le graphique aide à comparer les amplitudes. Il ne remplace ni les hypothèses de criblage, ni une validation des conditions retenues.</p>",
       "source": "TD Hadamard.docx"
     },
     {
@@ -529,7 +529,7 @@ window.CoursData = {
     {
       "chapter": "synthese",
       "title": "Une stratégie scientifique complète",
-      "body": "<svg class=\"science-svg\" viewBox=\"0 0 1200 280\" role=\"img\" aria-label=\"Question puis Plan et mesures puis Modèle vérifié puis Décision et limites\"><rect x=\"10\" y=\"70\" width=\"260\" height=\"100\" rx=\"8\" fill=\"#e8f0f8\" stroke=\"#1f4e79\"/><text x=\"140\" y=\"128\" text-anchor=\"middle\" font-size=\"29\">Question</text><path d=\"M275 120h25l-8-7m8 7l-8 7\" stroke=\"#1f4e79\" fill=\"none\"/><rect x=\"310\" y=\"70\" width=\"260\" height=\"100\" rx=\"8\" fill=\"#e8f0f8\" stroke=\"#1f4e79\"/><text x=\"440\" y=\"128\" text-anchor=\"middle\" font-size=\"29\">Plan et mesures</text><path d=\"M575 120h25l-8-7m8 7l-8 7\" stroke=\"#1f4e79\" fill=\"none\"/><rect x=\"610\" y=\"70\" width=\"260\" height=\"100\" rx=\"8\" fill=\"#e8f0f8\" stroke=\"#1f4e79\"/><text x=\"740\" y=\"128\" text-anchor=\"middle\" font-size=\"29\">Modèle vérifié</text><path d=\"M875 120h25l-8-7m8 7l-8 7\" stroke=\"#1f4e79\" fill=\"none\"/><rect x=\"910\" y=\"70\" width=\"260\" height=\"100\" rx=\"8\" fill=\"#e8f0f8\" stroke=\"#1f4e79\"/><text x=\"1040\" y=\"128\" text-anchor=\"middle\" font-size=\"29\">Décision et limites</text></svg><p>Consigner les conditions, prévoir les répétitions utiles, examiner les résidus, tester les prévisions et expliciter le domaine de conclusion.</p><p>Les fascicules F0 et F1 conservent les démonstrations détaillées. Les planches historiques complètes restent accessibles par chapitre.</p>",
+      "body": "<svg class=\"science-svg\" viewBox=\"0 0 1200 280\" role=\"img\" aria-label=\"Question puis Plan et mesures puis Modèle vérifié puis Décision et limites\"><rect x=\"10\" y=\"70\" width=\"260\" height=\"100\" rx=\"8\" fill=\"#e8f0f8\" stroke=\"#1f4e79\"/><text x=\"140\" y=\"128\" text-anchor=\"middle\" font-size=\"29\">Question</text><path d=\"M275 120h25l-8-7m8 7l-8 7\" stroke=\"#1f4e79\" fill=\"none\"/><rect x=\"310\" y=\"70\" width=\"260\" height=\"100\" rx=\"8\" fill=\"#e8f0f8\" stroke=\"#1f4e79\"/><text x=\"440\" y=\"128\" text-anchor=\"middle\" font-size=\"29\">Plan et mesures</text><path d=\"M575 120h25l-8-7m8 7l-8 7\" stroke=\"#1f4e79\" fill=\"none\"/><rect x=\"610\" y=\"70\" width=\"260\" height=\"100\" rx=\"8\" fill=\"#e8f0f8\" stroke=\"#1f4e79\"/><text x=\"740\" y=\"128\" text-anchor=\"middle\" font-size=\"29\">Modèle vérifié</text><path d=\"M875 120h25l-8-7m8 7l-8 7\" stroke=\"#1f4e79\" fill=\"none\"/><rect x=\"910\" y=\"70\" width=\"260\" height=\"100\" rx=\"8\" fill=\"#e8f0f8\" stroke=\"#1f4e79\"/><text x=\"1040\" y=\"128\" text-anchor=\"middle\" font-size=\"29\">Décision et limites</text></svg><p>Consigner les conditions, prévoir les répétitions utiles, examiner les résidus, tester les prévisions et expliciter le domaine de conclusion.</p><p>Retrouvez les démonstrations et les exercices complémentaires dans F0 et F1.</p>",
       "source": "Synthèse"
     }
   ]

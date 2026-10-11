@@ -1,0 +1,51 @@
+﻿/* Écriture des textes projetés : les références restent dans les métadonnées et les crédits. */
+module.exports=function clean(data){
+const pairs=[
+['Cours 1 · Comprendre et organiser les expériences','Comprendre et organiser les expériences'],
+['Conclure le cours 1 : une information adaptée à la décision','Une information adaptée à la décision'],
+['Deux fils conducteurs : soudure laser, puis frittage d’une céramique. Parcours prévu pour 1 h 58.','Comment comparer des réglages en soudure et identifier les paramètres importants d’un cycle de frittage ?'],
+['Exemple du cours : température','Température'],['Facteur du cours','Facteur'],['Objectif du cours','Objectif'],
+['Le support prend aussi l’exemple d’un produit métallique :','Pour un produit métallique :'],
+['Convention du support : ce coefficient est appelé « effet » ou « poids ».','Ce coefficient codé est aussi appelé « poids ».'],
+['Le cours propose de calculer les trois poids à partir de quatre expériences bien choisies.','Quatre expériences bien choisies permettent de calculer les trois poids.'],
+['Interpréter le graphique de soudure d’origine','Interpréter les poids des facteurs de soudure'],
+['La borne de précision du cours : ses conditions','Une borne de précision : ses conditions'],
+['Ces lignes sont des constructions disponibles, pas une preuve d’existence pour toute taille.','Ces lignes fournissent des constructions pour les tailles indiquées ; leur existence ne se généralise pas automatiquement à toute taille.'],
+['Le cours cherche les réglages influents avant une étude plus fine.','L’objectif est de repérer les réglages influents avant une étude plus fine.'],
+['Facteurs du cours','Facteurs'],['Ligne initiale du cours','Ligne génératrice'],
+['Mp1/Mp2 et Rp1/Rp2 sont des modalités du protocole original, à définir opérationnellement avant de reproduire les essais ; le support ne les décrit pas davantage.','Mp1/Mp2 et Rp1/Rp2 désignent deux modalités de mise en pression et de relâchement. Leurs définitions opérationnelles doivent être précisées avant de reproduire les essais.'],
+['Le cours choisit la ligne génératrice :','Ligne génératrice pour douze essais :'],
+['Le tableau complet original est accessible par le lien de provenance en bas de la slide.','Chaque ligne décrit les niveaux à appliquer à l’ensemble des facteurs.'],
+['Le support appelle « matrice des effets » le tableau incluant la constante. Distinguer ces deux tableaux évite de perdre une inconnue.','La matrice du modèle comprend une colonne supplémentaire de 1 pour la constante. Distinguer ces deux tableaux évite de perdre une inconnue.'],
+['Six premières lignes des données originales ; les six autres suivent. Aucune réponse n’est fabriquée par le modèle.','Six premières observations, obtenues dans six conditions expérimentales distinctes.'],
+['Les valeurs retrouvent celles du support.',''],
+['Le cours utilise des mesures répétées à condition identique.','On utilise des mesures répétées à condition identique.'],
+['La table originale donne les probabilités bilatérales : colonne 0,05 et ligne 3.','Dans une table donnant le risque bilatéral, lire la colonne 0,05 et la ligne 3.'],
+['Le support écrit parfois t₀,₉₅;₃. La valeur 3,18 correspond au quantile cumulé 0,975.','Le risque bilatéral de 5 % correspond au quantile cumulé 0,975.'],
+['Les écarts d’un centième avec le tableau historique viennent des arrondis ou troncatures.','Calculer sur les valeurs non arrondies, puis arrondir les résultats présentés.'],
+['Lire le Pareto original de porosité','Interpréter le Pareto de porosité'],
+['Porosité : retrouver les candidats sur les figures originales','Porosité : retrouver les facteurs qui se détachent'],
+['Densité : ce que montrent les figures historiques','Densité : interpréter les poids et les moyennes'],
+['Les limites historiques demandent une estimation de bruit propre à cette réponse.','Les limites de signification demandent une estimation de bruit propre à cette réponse.'],
+['Les tableaux d’origine utilisent des poids arrondis.','Les parts affichées sont arrondies.'],
+['Le support historique appelle souvent bⱼ « effet ». Nous distinguons ici coefficient codé bⱼ et différence entre niveaux Δⱼ.','Distinguer le coefficient codé bⱼ de la différence entre niveaux Δⱼ = 2bⱼ.'],
+['Les générateurs cycliques historiques sont conservés dans les planches.','Les lignes génératrices permettent de construire les plans par permutations circulaires.'],
+['La notation bilatérale correcte à 5 % est t₀,₉₇₅;ν, même lorsque l’original abrège « t₀,₉₅ ».','Pour un risque bilatéral de 5 %, utiliser le quantile t₀,₉₇₅;ν.'],
+['Les figures originales des cas céramique et des réponses multiples sont accessibles dans les planches du chapitre.','Comparer les diagnostics pour chaque réponse étudiée.'],
+['La mention « ≥ 11 » sur une planche historique est une coquille, pas un autre calcul.','Le modèle comporte dix coefficients ; la construction retenue comporte seize essais.'],
+['Notation historique :','Notation :'],
+['Les constructions par permutations et arithmétique modulaire sont conservées intégralement dans les planches.','Les plans se construisent notamment par permutations et arithmétique modulaire.'],
+['Niveaux historiques','Niveaux'],
+['Sécheur : lire l’interaction avec la figure originale','Sécheur : interpréter l’interaction'],
+['La source emploie ppm puis % pour la réponse : conserver les valeurs, mais confirmer l’unité avant une interprétation physique.','L’unité de la réponse doit être confirmée avant toute interprétation physique ou conversion.'],
+['Représentation historique du modèle','Surface de réponse'],
+['Graphe original des coefficients de diffusion','Coefficients de diffusion'],
+['dans l’ordre de la matrice historique','dans l’ordre de la matrice'],
+['TD Hadamard : conserver la lecture graphique originale','TD Hadamard : interpréter les coefficients'],
+['Graphe original des coefficients du dépôt','Coefficients de vitesse de dépôt'],
+['Les fascicules F0 et F1 conservent les démonstrations détaillées. Les planches historiques complètes restent accessibles par chapitre.','Retrouvez les démonstrations et les exercices complémentaires dans F0 et F1.']
+];
+for(const s of data.slides){for(const [a,b]of pairs){s.title=s.title.split(a).join(b);s.body=s.body.split(a).join(b);}s.body=s.body.replace(/ · Figure originale : Michelle Sergent, AMU\./g,'').replace(/ · Figure : Michelle Sergent \(AMU\), [^<]+/g,'');}
+if(data.source==='cours1.pdf')data.title='Plans d’expériences · Introduction et criblage';
+return data;
+};

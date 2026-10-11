@@ -1,5 +1,5 @@
 window.CoursData = {
-  "title": "Cours 1 · Introduction et criblage",
+  "title": "Plans d’expériences · Introduction et criblage",
   "duration": 118,
   "source": "cours1.pdf",
   "chapters": [
@@ -77,8 +77,8 @@ window.CoursData = {
   "slides": [
     {
       "chapter": "fondements",
-      "title": "Cours 1 · Comprendre et organiser les expériences",
-      "body": "<p>Introduction aux plans d’expériences et criblage à deux niveaux.</p><svg class=\"science-svg\" viewBox=\"0 0 1200 230\" role=\"img\" aria-label=\"Question puis Expériences puis Information puis Décision\"><rect x=\"8\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"140\" y=\"120\" text-anchor=\"middle\">Question</text><path d=\"M275 110h24l-8-7m8 7l-8 7\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\"/><rect x=\"308\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"440\" y=\"120\" text-anchor=\"middle\">Expériences</text><path d=\"M575 110h24l-8-7m8 7l-8 7\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\"/><rect x=\"608\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"740\" y=\"120\" text-anchor=\"middle\">Information</text><path d=\"M875 110h24l-8-7m8 7l-8 7\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\"/><rect x=\"908\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"1040\" y=\"120\" text-anchor=\"middle\">Décision</text></svg><p class=\"takeaway\">Deux fils conducteurs : soudure laser, puis frittage d’une céramique. Parcours prévu pour 1 h 58.</p>",
+      "title": "Comprendre et organiser les expériences",
+      "body": "<p>Introduction aux plans d’expériences et criblage à deux niveaux.</p><svg class=\"science-svg\" viewBox=\"0 0 1200 230\" role=\"img\" aria-label=\"Question puis Expériences puis Information puis Décision\"><rect x=\"8\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"140\" y=\"120\" text-anchor=\"middle\">Question</text><path d=\"M275 110h24l-8-7m8 7l-8 7\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\"/><rect x=\"308\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"440\" y=\"120\" text-anchor=\"middle\">Expériences</text><path d=\"M575 110h24l-8-7m8 7l-8 7\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\"/><rect x=\"608\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"740\" y=\"120\" text-anchor=\"middle\">Information</text><path d=\"M875 110h24l-8-7m8 7l-8 7\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\"/><rect x=\"908\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"1040\" y=\"120\" text-anchor=\"middle\">Décision</text></svg><p class=\"takeaway\">Comment comparer des réglages en soudure et identifier les paramètres importants d’un cycle de frittage ?</p>",
       "pages": [
         1,
         2
@@ -125,7 +125,7 @@ window.CoursData = {
     {
       "chapter": "fondements",
       "title": "Domaine expérimental : autorisé ne signifie pas déjà testé",
-      "body": "<div class=\"v3-columns\"><div><svg class=\"science-svg\" viewBox=\"0 0 650 430\" role=\"img\" aria-label=\"Domaine température 150 à 180 degrés et concentration 10 à 30 pour cent\"><rect x=\"120\" y=\"80\" width=\"380\" height=\"250\" fill=\"#edf3f7\"/><path d=\"M120 50V330H555\" stroke=\"#536b80\" stroke-width=\"3\" fill=\"none\"/><text x=\"320\" y=\"410\" text-anchor=\"middle\">Température (°C)</text><text x=\"20\" y=\"35\">Concentration (%)</text><text x=\"120\" y=\"365\" text-anchor=\"middle\">150</text><text x=\"310\" y=\"365\" text-anchor=\"middle\">165</text><text x=\"500\" y=\"365\" text-anchor=\"middle\">180</text><text x=\"100\" y=\"335\" text-anchor=\"end\">10</text><text x=\"100\" y=\"210\" text-anchor=\"end\">20</text><text x=\"100\" y=\"85\" text-anchor=\"end\">30</text><circle cx=\"310\" cy=\"205\" r=\"9\" fill=\"#b5591b\"/><text x=\"330\" y=\"195\">Centre</text></svg></div><div><p>Exemple du cours : température de 150 à 180 °C ; concentration de 10 à 30 %.</p><p>Le domaine décrit l’espace d’exploration. Les essais sont des points à l’intérieur de cet espace.</p><div class=\"frag\"><p>Définir des limites techniques et économiques, puis des niveaux permettant des comparaisons utiles.</p></div></div></div>",
+      "body": "<div class=\"v3-columns\"><div><svg class=\"science-svg\" viewBox=\"0 0 650 430\" role=\"img\" aria-label=\"Domaine température 150 à 180 degrés et concentration 10 à 30 pour cent\"><rect x=\"120\" y=\"80\" width=\"380\" height=\"250\" fill=\"#edf3f7\"/><path d=\"M120 50V330H555\" stroke=\"#536b80\" stroke-width=\"3\" fill=\"none\"/><text x=\"320\" y=\"410\" text-anchor=\"middle\">Température (°C)</text><text x=\"20\" y=\"35\">Concentration (%)</text><text x=\"120\" y=\"365\" text-anchor=\"middle\">150</text><text x=\"310\" y=\"365\" text-anchor=\"middle\">165</text><text x=\"500\" y=\"365\" text-anchor=\"middle\">180</text><text x=\"100\" y=\"335\" text-anchor=\"end\">10</text><text x=\"100\" y=\"210\" text-anchor=\"end\">20</text><text x=\"100\" y=\"85\" text-anchor=\"end\">30</text><circle cx=\"310\" cy=\"205\" r=\"9\" fill=\"#b5591b\"/><text x=\"330\" y=\"195\">Centre</text></svg></div><div><p>Température de 150 à 180 °C ; concentration de 10 à 30 %.</p><p>Le domaine décrit l’espace d’exploration. Les essais sont des points à l’intérieur de cet espace.</p><div class=\"frag\"><p>Définir des limites techniques et économiques, puis des niveaux permettant des comparaisons utiles.</p></div></div></div>",
       "pages": [
         7,
         8,
@@ -145,7 +145,7 @@ window.CoursData = {
     {
       "chapter": "fondements",
       "title": "Passer des unités naturelles aux codes",
-      "body": "<div class=\"eq\">\\[x_j=\\frac{U_j-U_j^0}{\\Delta U_j}\\]</div><table class=\"annotated-matrix\"><thead><tr><th>Facteur du cours</th><th>Centre U⁰</th><th>Demi-étendue ΔU</th><th>Codes des bornes</th></tr></thead><tbody><tr><td>Température</td><td>165 °C</td><td>15 °C</td><td>−1 ; +1</td></tr><tr><td>Concentration</td><td>20 %</td><td>10 points</td><td>−1 ; +1</td></tr></tbody></table><div class=\"frag\"><div class=\"eq\">\\[U_T=180\\Rightarrow x_T=1,\\qquad U_C=10\\Rightarrow x_C=-1\\]</div></div><p>Le codage change les repères, pas les conditions physiques.</p>",
+      "body": "<div class=\"eq\">\\[x_j=\\frac{U_j-U_j^0}{\\Delta U_j}\\]</div><table class=\"annotated-matrix\"><thead><tr><th>Facteur</th><th>Centre U⁰</th><th>Demi-étendue ΔU</th><th>Codes des bornes</th></tr></thead><tbody><tr><td>Température</td><td>165 °C</td><td>15 °C</td><td>−1 ; +1</td></tr><tr><td>Concentration</td><td>20 %</td><td>10 points</td><td>−1 ; +1</td></tr></tbody></table><div class=\"frag\"><div class=\"eq\">\\[U_T=180\\Rightarrow x_T=1,\\qquad U_C=10\\Rightarrow x_C=-1\\]</div></div><p>Le codage change les repères, pas les conditions physiques.</p>",
       "pages": [
         9
       ],
@@ -154,7 +154,7 @@ window.CoursData = {
     {
       "chapter": "fondements",
       "title": "Une boîte noire, plusieurs réponses",
-      "body": "<div class=\"v3-columns\"><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d10_image8.jpeg\" alt=\"Géométrie du produit étudié\"><figcaption>Géométrie du produit étudié · Figure originale : Michelle Sergent, AMU.</figcaption></figure></div><div><p>Le support prend aussi l’exemple d’un produit métallique : position, bombé, hauteur et rayon sont reliés à des performances.</p><table class=\"annotated-matrix\"><thead><tr><th>Entrées</th><th>Sorties</th></tr></thead><tbody><tr><td>Géométrie</td><td>Volume utile, résistance au remplissage</td></tr><tr><td>Fabrication</td><td>Tenue au choc, masse de métal</td></tr></tbody></table></div></div>",
+      "body": "<div class=\"v3-columns\"><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d10_image8.jpeg\" alt=\"Géométrie du produit étudié\"><figcaption>Géométrie du produit étudié</figcaption></figure></div><div><p>Pour un produit métallique : position, bombé, hauteur et rayon sont reliés à des performances.</p><table class=\"annotated-matrix\"><thead><tr><th>Entrées</th><th>Sorties</th></tr></thead><tbody><tr><td>Géométrie</td><td>Volume utile, résistance au remplissage</td></tr><tr><td>Fabrication</td><td>Tenue au choc, masse de métal</td></tr></tbody></table></div></div>",
       "pages": [
         10
       ],
@@ -172,7 +172,7 @@ window.CoursData = {
     {
       "chapter": "fondements",
       "title": "Des objectifs différents, des expériences différentes",
-      "body": "<table class=\"annotated-matrix\"><thead><tr><th>Objectif du cours</th><th>Information recherchée</th></tr></thead><tbody><tr><td>Explorer</td><td>Répartir les essais dans le domaine.</td></tr><tr><td>Cribler</td><td>Repérer les facteurs probablement influents.</td></tr><tr><td>Étudier plus finement</td><td>Examiner notamment les interactions.</td></tr></tbody></table><p class=\"takeaway\">On choisit un ensemble d’expériences conformément aux objectifs.</p>",
+      "body": "<table class=\"annotated-matrix\"><thead><tr><th>Objectif</th><th>Information recherchée</th></tr></thead><tbody><tr><td>Explorer</td><td>Répartir les essais dans le domaine.</td></tr><tr><td>Cribler</td><td>Repérer les facteurs probablement influents.</td></tr><tr><td>Étudier plus finement</td><td>Examiner notamment les interactions.</td></tr></tbody></table><p class=\"takeaway\">On choisit un ensemble d’expériences conformément aux objectifs.</p>",
       "pages": [
         12,
         13
@@ -192,7 +192,7 @@ window.CoursData = {
     {
       "chapter": "soudure",
       "title": "Deux niveaux : que mesure le « poids » d’un facteur ?",
-      "body": "<div class=\"eq\">\\[b_j=\\frac{\\bar y_{j+}-\\bar y_{j-}}2\\]</div><p>Convention du support : ce coefficient est appelé « effet » ou « poids ».</p><div class=\"frag\"><div class=\"eq\">\\[\\Delta_j=\\bar y_{j+}-\\bar y_{j-}=2b_j\\]</div></div><p class=\"takeaway\">Le coefficient codé est une demi-différence ; le changement entre les deux niveaux vaut 2bⱼ.</p>",
+      "body": "<div class=\"eq\">\\[b_j=\\frac{\\bar y_{j+}-\\bar y_{j-}}2\\]</div><p>Ce coefficient codé est aussi appelé « poids ».</p><div class=\"frag\"><div class=\"eq\">\\[\\Delta_j=\\bar y_{j+}-\\bar y_{j-}=2b_j\\]</div></div><p class=\"takeaway\">Le coefficient codé est une demi-différence ; le changement entre les deux niveaux vaut 2bⱼ.</p>",
       "pages": [
         16
       ],
@@ -244,7 +244,7 @@ window.CoursData = {
     {
       "chapter": "soudure",
       "title": "Changer la disposition des expériences",
-      "body": "<div class=\"v3-columns\"><div><table class=\"annotated-matrix\"><thead><tr><th>Approche</th><th>Essais</th><th>Organisation</th></tr></thead><tbody><tr><td>Un facteur à la fois</td><td>6</td><td>Deux réponses par contraste</td></tr><tr><td>Plan proposé</td><td>4</td><td>Variation simultanée</td></tr></tbody></table></div><div><p>Le cours propose de calculer les trois poids à partir de quatre expériences bien choisies.</p><div class=\"frag\"><p>Il faut des colonnes permettant de séparer les contributions : changer plusieurs facteurs au hasard ne suffit pas.</p></div></div></div>",
+      "body": "<div class=\"v3-columns\"><div><table class=\"annotated-matrix\"><thead><tr><th>Approche</th><th>Essais</th><th>Organisation</th></tr></thead><tbody><tr><td>Un facteur à la fois</td><td>6</td><td>Deux réponses par contraste</td></tr><tr><td>Plan proposé</td><td>4</td><td>Variation simultanée</td></tr></tbody></table></div><div><p>Quatre expériences bien choisies permettent de calculer les trois poids.</p><div class=\"frag\"><p>Il faut des colonnes permettant de séparer les contributions : changer plusieurs facteurs au hasard ne suffit pas.</p></div></div></div>",
       "pages": [
         22,
         23,
@@ -291,8 +291,8 @@ window.CoursData = {
     },
     {
       "chapter": "soudure",
-      "title": "Interpréter le graphique de soudure d’origine",
-      "body": "<figure class=\"original-figure\"><img src=\"figures/INTRO_d28_image19.png\" alt=\"Graphique des poids — soudure laser\"><figcaption>Graphique des poids — soudure laser · Figure originale : Michelle Sergent, AMU.</figcaption></figure><p class=\"takeaway\">Dans ces niveaux, augmenter l’hélium réduit les défauts ; augmenter la vitesse les augmente.</p>",
+      "title": "Interpréter les poids des facteurs de soudure",
+      "body": "<figure class=\"original-figure\"><img src=\"figures/INTRO_d28_image19.png\" alt=\"Graphique des poids — soudure laser\"><figcaption>Graphique des poids — soudure laser</figcaption></figure><p class=\"takeaway\">Dans ces niveaux, augmenter l’hélium réduit les défauts ; augmenter la vitesse les augmente.</p>",
       "pages": [
         28
       ],
@@ -346,7 +346,7 @@ window.CoursData = {
     },
     {
       "chapter": "precision",
-      "title": "La borne de précision du cours : ses conditions",
+      "title": "Une borne de précision : ses conditions",
       "body": "<div class=\"eq\">\\[\\operatorname{Var}(\\hat b_j)\\ge\\frac{\\sigma^2}{N}\\]</div><p>Modèle linéaire identifiable, niveaux codés bornés par ±1, erreurs centrées non corrélées de variance commune.</p><div class=\"frag\"><p>L’égalité est atteinte pour des colonnes de norme au carré N, orthogonales aux autres. « Optimal » se rapporte à ce modèle, ce critère et ce domaine.</p></div>",
       "pages": [
         31,
@@ -367,7 +367,7 @@ window.CoursData = {
     {
       "chapter": "precision",
       "title": "Construire le plan à partir de la ligne génératrice",
-      "body": "<table class=\"annotated-matrix\"><thead><tr><th>N</th><th>Ligne initiale du cours</th></tr></thead><tbody><tr><td>4</td><td>+ + −</td></tr><tr><td>8</td><td>+ + + − + − −</td></tr><tr><td>12</td><td>+ + − + + + − − − + −</td></tr></tbody></table><p>Décaler circulairement la ligne, puis ajouter une ligne de signes −. Ces lignes sont des constructions disponibles, pas une preuve d’existence pour toute taille.</p><p class=\"takeaway\">Pour l’étude suivante, N = 12 fournit onze colonnes de facteurs.</p>",
+      "body": "<table class=\"annotated-matrix\"><thead><tr><th>N</th><th>Ligne génératrice</th></tr></thead><tbody><tr><td>4</td><td>+ + −</td></tr><tr><td>8</td><td>+ + + − + − −</td></tr><tr><td>12</td><td>+ + − + + + − − − + −</td></tr></tbody></table><p>Décaler circulairement la ligne, puis ajouter une ligne de signes −. Ces lignes fournissent des constructions pour les tailles indiquées ; leur existence ne se généralise pas automatiquement à toute taille.</p><p class=\"takeaway\">Pour l’étude suivante, N = 12 fournit onze colonnes de facteurs.</p>",
       "pages": [
         33,
         34
@@ -377,7 +377,7 @@ window.CoursData = {
     {
       "chapter": "frittage",
       "title": "Frittage : comprendre un cycle industriel",
-      "body": "<p>Le traitement thermique densifie un aggloméré de poudres en dessous de sa température de fusion.</p><svg class=\"science-svg\" viewBox=\"0 0 1200 230\" role=\"img\" aria-label=\"Poudre puis Température puis Compression puis Céramique\"><rect x=\"8\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"140\" y=\"120\" text-anchor=\"middle\">Poudre</text><path d=\"M275 110h24l-8-7m8 7l-8 7\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\"/><rect x=\"308\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"440\" y=\"120\" text-anchor=\"middle\">Température</text><path d=\"M575 110h24l-8-7m8 7l-8 7\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\"/><rect x=\"608\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"740\" y=\"120\" text-anchor=\"middle\">Compression</text><path d=\"M875 110h24l-8-7m8 7l-8 7\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\"/><rect x=\"908\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"1040\" y=\"120\" text-anchor=\"middle\">Céramique</text></svg><p>La compression à chaud et le cycle thermique agissent sur la densification et la porosité. Le cours cherche les réglages influents avant une étude plus fine.</p>",
+      "body": "<p>Le traitement thermique densifie un aggloméré de poudres en dessous de sa température de fusion.</p><svg class=\"science-svg\" viewBox=\"0 0 1200 230\" role=\"img\" aria-label=\"Poudre puis Température puis Compression puis Céramique\"><rect x=\"8\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"140\" y=\"120\" text-anchor=\"middle\">Poudre</text><path d=\"M275 110h24l-8-7m8 7l-8 7\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\"/><rect x=\"308\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"440\" y=\"120\" text-anchor=\"middle\">Température</text><path d=\"M575 110h24l-8-7m8 7l-8 7\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\"/><rect x=\"608\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"740\" y=\"120\" text-anchor=\"middle\">Compression</text><path d=\"M875 110h24l-8-7m8 7l-8 7\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\"/><rect x=\"908\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"1040\" y=\"120\" text-anchor=\"middle\">Céramique</text></svg><p>La compression à chaud et le cycle thermique agissent sur la densification et la porosité. L’objectif est de repérer les réglages influents avant une étude plus fine.</p>",
       "pages": [
         35
       ],
@@ -386,7 +386,7 @@ window.CoursData = {
     {
       "chapter": "frittage",
       "title": "Trois réponses, trois critères",
-      "body": "<div class=\"v3-columns\"><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d36_image23.png\" alt=\"Étude de compression de la céramique\"><figcaption>Étude de compression de la céramique · Figure originale : Michelle Sergent, AMU.</figcaption></figure></div><div><table class=\"annotated-matrix\"><thead><tr><th>Réponse</th><th>Objectif</th></tr></thead><tbody><tr><td>Y₁ · Densité relative (%)</td><td>Proche de 100 %</td></tr><tr><td>Y₂ · Porosité ouverte (%)</td><td>Proche de 0 %</td></tr><tr><td>Y₃ · Résistance à la flexion</td><td>Maximiser</td></tr></tbody></table></div></div>",
+      "body": "<div class=\"v3-columns\"><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d36_image23.png\" alt=\"Étude de compression de la céramique\"><figcaption>Étude de compression de la céramique</figcaption></figure></div><div><table class=\"annotated-matrix\"><thead><tr><th>Réponse</th><th>Objectif</th></tr></thead><tbody><tr><td>Y₁ · Densité relative (%)</td><td>Proche de 100 %</td></tr><tr><td>Y₂ · Porosité ouverte (%)</td><td>Proche de 0 %</td></tr><tr><td>Y₃ · Résistance à la flexion</td><td>Maximiser</td></tr></tbody></table></div></div>",
       "pages": [
         36
       ],
@@ -395,7 +395,7 @@ window.CoursData = {
     {
       "chapter": "frittage",
       "title": "Deux paliers de température, un cycle de pression",
-      "body": "<svg class=\"science-svg\" viewBox=\"0 0 1200 230\" role=\"img\" aria-label=\"Montée puis Palier 1 puis Palier 2 puis Descente\"><rect x=\"8\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"140\" y=\"120\" text-anchor=\"middle\">Montée</text><path d=\"M275 110h24l-8-7m8 7l-8 7\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\"/><rect x=\"308\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"440\" y=\"120\" text-anchor=\"middle\">Palier 1</text><path d=\"M575 110h24l-8-7m8 7l-8 7\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\"/><rect x=\"608\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"740\" y=\"120\" text-anchor=\"middle\">Palier 2</text><path d=\"M875 110h24l-8-7m8 7l-8 7\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\"/><rect x=\"908\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"1040\" y=\"120\" text-anchor=\"middle\">Descente</text></svg><table class=\"annotated-matrix\"><thead><tr><th>Partie du cycle</th><th>Facteurs du cours</th></tr></thead><tbody><tr><td>Température</td><td>U₁, U₂ : palier 1 ; U₃, U₄ : palier 2</td></tr><tr><td>Vitesses thermiques</td><td>U₅ : montée ; U₆ : descente</td></tr><tr><td>Pression</td><td>U₇ : niveau ; U₈–U₁₁ : instants et vitesses</td></tr></tbody></table><p>Ces choix visent la densification en limitant la croissance des grains.</p>",
+      "body": "<svg class=\"science-svg\" viewBox=\"0 0 1200 230\" role=\"img\" aria-label=\"Montée puis Palier 1 puis Palier 2 puis Descente\"><rect x=\"8\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"140\" y=\"120\" text-anchor=\"middle\">Montée</text><path d=\"M275 110h24l-8-7m8 7l-8 7\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\"/><rect x=\"308\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"440\" y=\"120\" text-anchor=\"middle\">Palier 1</text><path d=\"M575 110h24l-8-7m8 7l-8 7\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\"/><rect x=\"608\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"740\" y=\"120\" text-anchor=\"middle\">Palier 2</text><path d=\"M875 110h24l-8-7m8 7l-8 7\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\"/><rect x=\"908\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"1040\" y=\"120\" text-anchor=\"middle\">Descente</text></svg><table class=\"annotated-matrix\"><thead><tr><th>Partie du cycle</th><th>Facteurs</th></tr></thead><tbody><tr><td>Température</td><td>U₁, U₂ : palier 1 ; U₃, U₄ : palier 2</td></tr><tr><td>Vitesses thermiques</td><td>U₅ : montée ; U₆ : descente</td></tr><tr><td>Pression</td><td>U₇ : niveau ; U₈–U₁₁ : instants et vitesses</td></tr></tbody></table><p>Ces choix visent la densification en limitant la croissance des grains.</p>",
       "pages": [
         37,
         38
@@ -414,7 +414,7 @@ window.CoursData = {
     {
       "chapter": "frittage",
       "title": "Domaine : les cinq facteurs de pression",
-      "body": "<table class=\"annotated-matrix\"><thead><tr><th>Facteur</th><th>Réglage</th><th>Niveau −</th><th>Niveau +</th></tr></thead><tbody><tr><td>U₇</td><td>Pression (MPa)</td><td>20</td><td>40</td></tr><tr><td>U₈</td><td>Mise en pression</td><td>Mp1</td><td>Mp2</td></tr><tr><td>U₉</td><td>Relâchement pression</td><td>Rp1</td><td>Rp2</td></tr><tr><td>U₁₀</td><td>Montée pression (MPa/s)</td><td>0,1</td><td>1,0</td></tr><tr><td>U₁₁</td><td>Descente pression (MPa/s)</td><td>0,1</td><td>1,0</td></tr></tbody></table><p>Mp1/Mp2 et Rp1/Rp2 sont des modalités du protocole original, à définir opérationnellement avant de reproduire les essais ; le support ne les décrit pas davantage.</p>",
+      "body": "<table class=\"annotated-matrix\"><thead><tr><th>Facteur</th><th>Réglage</th><th>Niveau −</th><th>Niveau +</th></tr></thead><tbody><tr><td>U₇</td><td>Pression (MPa)</td><td>20</td><td>40</td></tr><tr><td>U₈</td><td>Mise en pression</td><td>Mp1</td><td>Mp2</td></tr><tr><td>U₉</td><td>Relâchement pression</td><td>Rp1</td><td>Rp2</td></tr><tr><td>U₁₀</td><td>Montée pression (MPa/s)</td><td>0,1</td><td>1,0</td></tr><tr><td>U₁₁</td><td>Descente pression (MPa/s)</td><td>0,1</td><td>1,0</td></tr></tbody></table><p>Mp1/Mp2 et Rp1/Rp2 désignent deux modalités de mise en pression et de relâchement. Leurs définitions opérationnelles doivent être précisées avant de reproduire les essais.</p>",
       "pages": [
         39
       ],
@@ -434,7 +434,7 @@ window.CoursData = {
     {
       "chapter": "frittage",
       "title": "Onze facteurs : sélectionner la matrice à douze essais",
-      "body": "<div class=\"eq\">\\[k=11\\Rightarrow p=12\\Rightarrow N=12\\]</div><p>Le cours choisit la ligne génératrice :</p><div class=\"eq\">\\[(+,+,-,+,+,+,-,-,-,+,-)\\]</div><div class=\"frag\"><p>Douze lignes et onze facteurs ; avec la constante, la matrice du modèle devient 12 × 12.</p></div>",
+      "body": "<div class=\"eq\">\\[k=11\\Rightarrow p=12\\Rightarrow N=12\\]</div><p>Ligne génératrice pour douze essais :</p><div class=\"eq\">\\[(+,+,-,+,+,+,-,-,-,+,-)\\]</div><div class=\"frag\"><p>Douze lignes et onze facteurs ; avec la constante, la matrice du modèle devient 12 × 12.</p></div>",
       "pages": [
         43,
         44
@@ -444,7 +444,7 @@ window.CoursData = {
     {
       "chapter": "frittage",
       "title": "Voir les permutations circulaires",
-      "body": "<table class=\"annotated-matrix\"><thead><tr><th>Essai</th><th>Onze signes de la matrice</th></tr></thead><tbody><tr><td>1</td><td>+  +  −  +  +  +  −  −  −  +  −</td></tr><tr><td>2</td><td>−  +  +  −  +  +  +  −  −  −  +</td></tr><tr><td>3</td><td>+  −  +  +  −  +  +  +  −  −  −</td></tr><tr><td>…</td><td>…</td></tr><tr><td>12</td><td>−  −  −  −  −  −  −  −  −  −  −</td></tr></tbody></table><p>Chaque ligne déplace les signes d’une position. La dernière ligne est entièrement au niveau −.</p><p class=\"takeaway\">Le tableau complet original est accessible par le lien de provenance en bas de la slide.</p>",
+      "body": "<table class=\"annotated-matrix\"><thead><tr><th>Essai</th><th>Onze signes de la matrice</th></tr></thead><tbody><tr><td>1</td><td>+  +  −  +  +  +  −  −  −  +  −</td></tr><tr><td>2</td><td>−  +  +  −  +  +  +  −  −  −  +</td></tr><tr><td>3</td><td>+  −  +  +  −  +  +  +  −  −  −</td></tr><tr><td>…</td><td>…</td></tr><tr><td>12</td><td>−  −  −  −  −  −  −  −  −  −  −</td></tr></tbody></table><p>Chaque ligne déplace les signes d’une position. La dernière ligne est entièrement au niveau −.</p><p class=\"takeaway\">Chaque ligne décrit les niveaux à appliquer à l’ensemble des facteurs.</p>",
       "pages": [
         45
       ],
@@ -453,7 +453,7 @@ window.CoursData = {
     {
       "chapter": "frittage",
       "title": "Matrice d’expériences et matrice du modèle",
-      "body": "<table class=\"annotated-matrix\"><thead><tr><th>Objet</th><th>Lignes</th><th>Colonnes</th></tr></thead><tbody><tr><td>Matrice d’expériences</td><td>12 essais</td><td>11 facteurs codés</td></tr><tr><td>Matrice du modèle X</td><td>12 essais</td><td>1 constante + 11 facteurs</td></tr></tbody></table><div class=\"eq\">\\[y_i=b_0+\\sum_{j=1}^{11}b_jx_{ij}+\\varepsilon_i\\]</div><p>Le support appelle « matrice des effets » le tableau incluant la constante. Distinguer ces deux tableaux évite de perdre une inconnue.</p>",
+      "body": "<table class=\"annotated-matrix\"><thead><tr><th>Objet</th><th>Lignes</th><th>Colonnes</th></tr></thead><tbody><tr><td>Matrice d’expériences</td><td>12 essais</td><td>11 facteurs codés</td></tr><tr><td>Matrice du modèle X</td><td>12 essais</td><td>1 constante + 11 facteurs</td></tr></tbody></table><div class=\"eq\">\\[y_i=b_0+\\sum_{j=1}^{11}b_jx_{ij}+\\varepsilon_i\\]</div><p>La matrice du modèle comprend une colonne supplémentaire de 1 pour la constante. Distinguer ces deux tableaux évite de perdre une inconnue.</p>",
       "pages": [
         46,
         47,
@@ -483,7 +483,7 @@ window.CoursData = {
     {
       "chapter": "frittage",
       "title": "Faire les essais et conserver les trois réponses",
-      "body": "<table class=\"annotated-matrix\"><thead><tr><th>Essai</th><th>Densité Y₁ (%)</th><th>Porosité Y₂ (%)</th><th>Flexion Y₃</th></tr></thead><tbody><tr><td>1</td><td>91,2</td><td>1,79</td><td>845</td></tr><tr><td>2</td><td>92,7</td><td>0,03</td><td>1022</td></tr><tr><td>3</td><td>99,2</td><td>0,23</td><td>1067</td></tr><tr><td>4</td><td>90,6</td><td>1,49</td><td>878</td></tr><tr><td>5</td><td>80,3</td><td>3,63</td><td>715</td></tr><tr><td>6</td><td>90,6</td><td>1,75</td><td>911</td></tr></tbody></table><p>Six premières lignes des données originales ; les six autres suivent. Aucune réponse n’est fabriquée par le modèle.</p>",
+      "body": "<table class=\"annotated-matrix\"><thead><tr><th>Essai</th><th>Densité Y₁ (%)</th><th>Porosité Y₂ (%)</th><th>Flexion Y₃</th></tr></thead><tbody><tr><td>1</td><td>91,2</td><td>1,79</td><td>845</td></tr><tr><td>2</td><td>92,7</td><td>0,03</td><td>1022</td></tr><tr><td>3</td><td>99,2</td><td>0,23</td><td>1067</td></tr><tr><td>4</td><td>90,6</td><td>1,49</td><td>878</td></tr><tr><td>5</td><td>80,3</td><td>3,63</td><td>715</td></tr><tr><td>6</td><td>90,6</td><td>1,75</td><td>911</td></tr></tbody></table><p>Six premières observations, obtenues dans six conditions expérimentales distinctes.</p>",
       "pages": [
         52,
         53,
@@ -504,7 +504,7 @@ window.CoursData = {
     {
       "chapter": "contrastes",
       "title": "Commencer par regarder les données",
-      "body": "<figure class=\"original-figure\"><img src=\"figures/INTRO_d56_image25.png\" alt=\"Distribution des douze porosités\"><figcaption>Distribution des douze porosités · Figure originale : Michelle Sergent, AMU.</figcaption></figure><p>Porosité : moyenne 1,45 %, minimum 0,03 %, maximum 4,13 %. La dispersion entre conditions contient des effets possibles ; ce n’est pas une mesure pure du bruit.</p>",
+      "body": "<figure class=\"original-figure\"><img src=\"figures/INTRO_d56_image25.png\" alt=\"Distribution des douze porosités\"><figcaption>Distribution des douze porosités</figcaption></figure><p>Porosité : moyenne 1,45 %, minimum 0,03 %, maximum 4,13 %. La dispersion entre conditions contient des effets possibles ; ce n’est pas une mesure pure du bruit.</p>",
       "pages": [
         55,
         56
@@ -543,7 +543,7 @@ window.CoursData = {
     {
       "chapter": "contrastes",
       "title": "Les onze poids de la porosité",
-      "body": "<table class=\"annotated-matrix\"><thead><tr><th>Facteur</th><th>Poids</th><th>Facteur</th><th>Poids</th></tr></thead><tbody><tr><td>b1</td><td>-0,47</td><td>b7</td><td>-0,42</td></tr><tr><td>b2</td><td>0,05</td><td>b8</td><td>0,68</td></tr><tr><td>b3</td><td>-0,02</td><td>b9</td><td>-0,03</td></tr><tr><td>b4</td><td>0,13</td><td>b10</td><td>0,88</td></tr><tr><td>b5</td><td>0,09</td><td>b11</td><td>0,10</td></tr><tr><td>b6</td><td>-0,03</td><td>b₀</td><td>1,45</td></tr></tbody></table><p>Poids négatif : passer au niveau + réduit la porosité moyenne, sous les hypothèses de criblage. Les valeurs retrouvent celles du support.</p>",
+      "body": "<table class=\"annotated-matrix\"><thead><tr><th>Facteur</th><th>Poids</th><th>Facteur</th><th>Poids</th></tr></thead><tbody><tr><td>b1</td><td>-0,47</td><td>b7</td><td>-0,42</td></tr><tr><td>b2</td><td>0,05</td><td>b8</td><td>0,68</td></tr><tr><td>b3</td><td>-0,02</td><td>b9</td><td>-0,03</td></tr><tr><td>b4</td><td>0,13</td><td>b10</td><td>0,88</td></tr><tr><td>b5</td><td>0,09</td><td>b11</td><td>0,10</td></tr><tr><td>b6</td><td>-0,03</td><td>b₀</td><td>1,45</td></tr></tbody></table><p>Poids négatif : passer au niveau + réduit la porosité moyenne, sous les hypothèses de criblage. </p>",
       "pages": [
         58
       ],
@@ -552,7 +552,7 @@ window.CoursData = {
     {
       "chapter": "contrastes",
       "title": "Le graphique ne donne pas encore la significativité",
-      "body": "<figure class=\"original-figure\"><img src=\"figures/INTRO_d60_image28.png\" alt=\"Poids des facteurs — porosité\"><figcaption>Poids des facteurs — porosité · Figure originale : Michelle Sergent, AMU.</figcaption></figure><p>Les amplitudes suggèrent une hiérarchie. Il faut encore une échelle d’incertitude pour distinguer variation plausible sous bruit et facteur probablement actif.</p>",
+      "body": "<figure class=\"original-figure\"><img src=\"figures/INTRO_d60_image28.png\" alt=\"Poids des facteurs — porosité\"><figcaption>Poids des facteurs — porosité</figcaption></figure><p>Les amplitudes suggèrent une hiérarchie. Il faut encore une échelle d’incertitude pour distinguer variation plausible sous bruit et facteur probablement actif.</p>",
       "pages": [
         59,
         60
@@ -562,7 +562,7 @@ window.CoursData = {
     {
       "chapter": "signification",
       "title": "D’où vient l’estimation du bruit ?",
-      "body": "<p>Le plan saturé ne permet pas d’estimer le bruit à partir de ses résidus. Le cours utilise des mesures répétées à condition identique.</p><div class=\"eq\">\\[s^2=\\frac{\\sum_{i=1}^r(y_i-\\bar y)^2}{r-1},\\qquad \\nu=r-1\\]</div><p>Une variance estimée n’est pas exactement connue. Son usage pour le plan suppose notamment une variance commune crédible.</p>",
+      "body": "<p>Le plan saturé ne permet pas d’estimer le bruit à partir de ses résidus. On utilise des mesures répétées à condition identique.</p><div class=\"eq\">\\[s^2=\\frac{\\sum_{i=1}^r(y_i-\\bar y)^2}{r-1},\\qquad \\nu=r-1\\]</div><p>Une variance estimée n’est pas exactement connue. Son usage pour le plan suppose notamment une variance commune crédible.</p>",
       "pages": [
         61
       ],
@@ -593,7 +593,7 @@ window.CoursData = {
     {
       "chapter": "signification",
       "title": "Lire le seuil bilatéral sans ambiguïté",
-      "body": "<div class=\"eq\">\\[\\alpha=0{,}05,\\quad \\nu=3,\\quad t_{1-\\alpha/2;3}=t_{0{,}975;3}=3{,}1824\\]</div><p>La table originale donne les probabilités bilatérales : colonne 0,05 et ligne 3.</p><div class=\"frag\"><div class=\"eq\">\\[L=3{,}1824\\times0{,}07071\\simeq0{,}225\\]</div></div><p>Le support écrit parfois t₀,₉₅;₃. La valeur 3,18 correspond au quantile cumulé 0,975.</p>",
+      "body": "<div class=\"eq\">\\[\\alpha=0{,}05,\\quad \\nu=3,\\quad t_{1-\\alpha/2;3}=t_{0{,}975;3}=3{,}1824\\]</div><p>Dans une table donnant le risque bilatéral, lire la colonne 0,05 et la ligne 3.</p><div class=\"frag\"><div class=\"eq\">\\[L=3{,}1824\\times0{,}07071\\simeq0{,}225\\]</div></div><p>Le risque bilatéral de 5 % correspond au quantile cumulé 0,975.</p>",
       "pages": [
         64,
         65
@@ -613,7 +613,7 @@ window.CoursData = {
     {
       "chapter": "signification",
       "title": "Porosité : quatre candidats ressortent",
-      "body": "<figure class=\"original-figure\"><img src=\"figures/INTRO_d66_image29.png\" alt=\"Limites de signification — porosité\"><figcaption>Limites de signification — porosité · Figure originale : Michelle Sergent, AMU.</figcaption></figure><p>Premier palier (1), pression (7), mise en pression (8) et montée en pression (10).</p><p class=\"takeaway\">Non significatif ne signifie pas identique ou sans effet. Onze tests individuels ne donnent pas un risque global de 5 %.</p>",
+      "body": "<figure class=\"original-figure\"><img src=\"figures/INTRO_d66_image29.png\" alt=\"Limites de signification — porosité\"><figcaption>Limites de signification — porosité</figcaption></figure><p>Premier palier (1), pression (7), mise en pression (8) et montée en pression (10).</p><p class=\"takeaway\">Non significatif ne signifie pas identique ou sans effet. Onze tests individuels ne donnent pas un risque global de 5 %.</p>",
       "pages": [
         66
       ],
@@ -622,7 +622,7 @@ window.CoursData = {
     {
       "chapter": "interpretation",
       "title": "Effets totaux : revenir aux moyennes de niveaux",
-      "body": "<figure class=\"original-figure\"><img src=\"figures/INTRO_d67_image30.png\" alt=\"Effets totaux — porosité\"><figcaption>Effets totaux — porosité · Figure originale : Michelle Sergent, AMU.</figcaption></figure><div class=\"eq\">\\[\\bar y_{j-}=b_0-b_j,\\qquad\\bar y_{j+}=b_0+b_j\\]</div><p>Le plan équilibré rend cette relation exacte pour les moyennes observées. Lire le sens de variation avant de recommander un niveau.</p>",
+      "body": "<figure class=\"original-figure\"><img src=\"figures/INTRO_d67_image30.png\" alt=\"Effets totaux — porosité\"><figcaption>Effets totaux — porosité</figcaption></figure><div class=\"eq\">\\[\\bar y_{j-}=b_0-b_j,\\qquad\\bar y_{j+}=b_0+b_j\\]</div><p>Le plan équilibré rend cette relation exacte pour les moyennes observées. Lire le sens de variation avant de recommander un niveau.</p>",
       "pages": [
         67
       ],
@@ -640,7 +640,7 @@ window.CoursData = {
     {
       "chapter": "interpretation",
       "title": "Pareto de porosité : calculer avant de classer",
-      "body": "<div class=\"eq\">\\[\\sum_{j=1}^{11}b_j^2=1{,}6738\\]</div><table class=\"annotated-matrix\"><thead><tr><th>Facteur</th><th>bⱼ</th><th>bⱼ²</th><th>Part (%)</th></tr></thead><tbody><tr><td>10</td><td>0,88</td><td>0,7744</td><td>46,27</td></tr><tr><td>8</td><td>0,68</td><td>0,4624</td><td>27,63</td></tr><tr><td>1</td><td>−0,47</td><td>0,2209</td><td>13,20</td></tr><tr><td>7</td><td>−0,42</td><td>0,1764</td><td>10,54</td></tr></tbody></table><p>Les écarts d’un centième avec le tableau historique viennent des arrondis ou troncatures.</p>",
+      "body": "<div class=\"eq\">\\[\\sum_{j=1}^{11}b_j^2=1{,}6738\\]</div><table class=\"annotated-matrix\"><thead><tr><th>Facteur</th><th>bⱼ</th><th>bⱼ²</th><th>Part (%)</th></tr></thead><tbody><tr><td>10</td><td>0,88</td><td>0,7744</td><td>46,27</td></tr><tr><td>8</td><td>0,68</td><td>0,4624</td><td>27,63</td></tr><tr><td>1</td><td>−0,47</td><td>0,2209</td><td>13,20</td></tr><tr><td>7</td><td>−0,42</td><td>0,1764</td><td>10,54</td></tr></tbody></table><p>Calculer sur les valeurs non arrondies, puis arrondir les résultats présentés.</p>",
       "pages": [
         69
       ],
@@ -648,8 +648,8 @@ window.CoursData = {
     },
     {
       "chapter": "interpretation",
-      "title": "Lire le Pareto original de porosité",
-      "body": "<div class=\"v3-columns\"><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d70_image33.png\" alt=\"Pareto — porosité\"><figcaption>Pareto — porosité · Figure originale : Michelle Sergent, AMU.</figcaption></figure></div><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d70_image34.png\" alt=\"Pareto cumulé — porosité\"><figcaption>Pareto cumulé — porosité · Figure originale : Michelle Sergent, AMU.</figcaption></figure></div></div><p>Les facteurs 10 et 8 représentent ensemble environ 73,9 % de la somme des carrés des poids. Revenir au signe pour choisir un niveau.</p>",
+      "title": "Interpréter le Pareto de porosité",
+      "body": "<div class=\"v3-columns\"><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d70_image33.png\" alt=\"Pareto — porosité\"><figcaption>Pareto — porosité</figcaption></figure></div><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d70_image34.png\" alt=\"Pareto cumulé — porosité\"><figcaption>Pareto cumulé — porosité</figcaption></figure></div></div><p>Les facteurs 10 et 8 représentent ensemble environ 73,9 % de la somme des carrés des poids. Revenir au signe pour choisir un niveau.</p>",
       "pages": [
         70
       ],
@@ -676,8 +676,8 @@ window.CoursData = {
     },
     {
       "chapter": "interpretation",
-      "title": "Porosité : retrouver les candidats sur les figures originales",
-      "body": "<div class=\"v3-columns\"><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d72_image35.png\" alt=\"Normal plot — porosité\"><figcaption>Normal plot — porosité · Figure originale : Michelle Sergent, AMU.</figcaption></figure></div><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d72_image36.png\" alt=\"Half-normal plot — porosité\"><figcaption>Half-normal plot — porosité · Figure originale : Michelle Sergent, AMU.</figcaption></figure></div></div><p>Les candidats 1, 7, 8 et 10 se détachent. L’accord entre outils renforce une piste ; il ne valide pas toutes les hypothèses.</p>",
+      "title": "Porosité : retrouver les facteurs qui se détachent",
+      "body": "<div class=\"v3-columns\"><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d72_image35.png\" alt=\"Normal plot — porosité\"><figcaption>Normal plot — porosité</figcaption></figure></div><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d72_image36.png\" alt=\"Half-normal plot — porosité\"><figcaption>Half-normal plot — porosité</figcaption></figure></div></div><p>Les candidats 1, 7, 8 et 10 se détachent. L’accord entre outils renforce une piste ; il ne valide pas toutes les hypothèses.</p>",
       "pages": [
         72
       ],
@@ -695,8 +695,8 @@ window.CoursData = {
     },
     {
       "chapter": "interpretation",
-      "title": "Densité : ce que montrent les figures historiques",
-      "body": "<div class=\"v3-columns\"><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d75_image37.png\" alt=\"Poids — densité\"><figcaption>Poids — densité · Figure originale : Michelle Sergent, AMU.</figcaption></figure></div><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d76_image38.png\" alt=\"Moyennes de niveaux — densité\"><figcaption>Moyennes de niveaux — densité · Figure originale : Michelle Sergent, AMU.</figcaption></figure></div></div><p>Température du premier palier et pression élevées sont des pistes pour accroître la densité. Les limites historiques demandent une estimation de bruit propre à cette réponse.</p>",
+      "title": "Densité : interpréter les poids et les moyennes",
+      "body": "<div class=\"v3-columns\"><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d75_image37.png\" alt=\"Poids — densité\"><figcaption>Poids — densité</figcaption></figure></div><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d76_image38.png\" alt=\"Moyennes de niveaux — densité\"><figcaption>Moyennes de niveaux — densité</figcaption></figure></div></div><p>Température du premier palier et pression élevées sont des pistes pour accroître la densité. Les limites de signification demandent une estimation de bruit propre à cette réponse.</p>",
       "pages": [
         75,
         76
@@ -706,7 +706,7 @@ window.CoursData = {
     {
       "chapter": "interpretation",
       "title": "Densité : vérifier le diagnostic normal/half-normal",
-      "body": "<div class=\"v3-columns\"><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d77_image39.png\" alt=\"Normal plot — densité\"><figcaption>Normal plot — densité · Figure originale : Michelle Sergent, AMU.</figcaption></figure></div><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d77_image40.png\" alt=\"Half-normal plot — densité\"><figcaption>Half-normal plot — densité · Figure originale : Michelle Sergent, AMU.</figcaption></figure></div></div><p>Les facteurs 1 et 7 ressortent, en cohérence avec la hiérarchie des poids dans ce domaine.</p>",
+      "body": "<div class=\"v3-columns\"><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d77_image39.png\" alt=\"Normal plot — densité\"><figcaption>Normal plot — densité</figcaption></figure></div><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d77_image40.png\" alt=\"Half-normal plot — densité\"><figcaption>Half-normal plot — densité</figcaption></figure></div></div><p>Les facteurs 1 et 7 ressortent, en cohérence avec la hiérarchie des poids dans ce domaine.</p>",
       "pages": [
         77
       ],
@@ -715,7 +715,7 @@ window.CoursData = {
     {
       "chapter": "interpretation",
       "title": "Densité : Pareto et arrondis",
-      "body": "<div class=\"v3-columns\"><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d79_image41.png\" alt=\"Pareto — densité\"><figcaption>Pareto — densité · Figure originale : Michelle Sergent, AMU.</figcaption></figure></div><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d79_image42.png\" alt=\"Pareto cumulé — densité\"><figcaption>Pareto cumulé — densité · Figure originale : Michelle Sergent, AMU.</figcaption></figure></div></div><p>Premier palier : environ 49,9 % ; pression : environ 43,1 %. Les deux dominent les contrastes. Les tableaux d’origine utilisent des poids arrondis.</p>",
+      "body": "<div class=\"v3-columns\"><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d79_image41.png\" alt=\"Pareto — densité\"><figcaption>Pareto — densité</figcaption></figure></div><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d79_image42.png\" alt=\"Pareto cumulé — densité\"><figcaption>Pareto cumulé — densité</figcaption></figure></div></div><p>Premier palier : environ 49,9 % ; pression : environ 43,1 %. Les deux dominent les contrastes. Les parts affichées sont arrondies.</p>",
       "pages": [
         78,
         79
@@ -734,7 +734,7 @@ window.CoursData = {
     {
       "chapter": "interpretation",
       "title": "Flexion : lire les poids et le diagnostic graphique",
-      "body": "<div class=\"v3-columns\"><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d82_image43.png\" alt=\"Poids — flexion\"><figcaption>Poids — flexion · Figure originale : Michelle Sergent, AMU.</figcaption></figure></div><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d83_image45.png\" alt=\"Half-normal plot — flexion\"><figcaption>Half-normal plot — flexion · Figure originale : Michelle Sergent, AMU.</figcaption></figure></div></div><p>Pression et premier palier dominent ; second palier et descente en pression méritent aussi attention. Ce sont des candidats, pas une garantie d’optimalité.</p>",
+      "body": "<div class=\"v3-columns\"><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d82_image43.png\" alt=\"Poids — flexion\"><figcaption>Poids — flexion</figcaption></figure></div><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d83_image45.png\" alt=\"Half-normal plot — flexion\"><figcaption>Half-normal plot — flexion</figcaption></figure></div></div><p>Pression et premier palier dominent ; second palier et descente en pression méritent aussi attention. Ce sont des candidats, pas une garantie d’optimalité.</p>",
       "pages": [
         81,
         82,
@@ -745,7 +745,7 @@ window.CoursData = {
     {
       "chapter": "interpretation",
       "title": "Flexion : conserver la hiérarchie et le signe",
-      "body": "<div class=\"v3-columns\"><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d85_image46.png\" alt=\"Pareto — flexion\"><figcaption>Pareto — flexion · Figure originale : Michelle Sergent, AMU.</figcaption></figure></div><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d85_image47.png\" alt=\"Pareto cumulé — flexion\"><figcaption>Pareto cumulé — flexion · Figure originale : Michelle Sergent, AMU.</figcaption></figure></div></div><p>Pression ≈ 48,3 % ; premier palier ≈ 34,4 % ; second palier ≈ 8,0 % ; descente en pression ≈ 5,7 %.</p><p>Les poids 7 et 1 sont positifs : les niveaux hauts sont des candidats pour accroître la résistance.</p>",
+      "body": "<div class=\"v3-columns\"><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d85_image46.png\" alt=\"Pareto — flexion\"><figcaption>Pareto — flexion</figcaption></figure></div><div><figure class=\"original-figure\"><img src=\"figures/INTRO_d85_image47.png\" alt=\"Pareto cumulé — flexion\"><figcaption>Pareto cumulé — flexion</figcaption></figure></div></div><p>Pression ≈ 48,3 % ; premier palier ≈ 34,4 % ; second palier ≈ 8,0 % ; descente en pression ≈ 5,7 %.</p><p>Les poids 7 et 1 sont positifs : les niveaux hauts sont des candidats pour accroître la résistance.</p>",
       "pages": [
         84,
         85
@@ -755,7 +755,7 @@ window.CoursData = {
     {
       "chapter": "interpretation",
       "title": "Des poids à une décision de procédé",
-      "body": "<figure class=\"original-figure\"><img src=\"figures/INTRO_d86_image48.png\" alt=\"Effets totaux — flexion\"><figcaption>Effets totaux — flexion · Figure originale : Michelle Sergent, AMU.</figcaption></figure><p>Premier palier et pression vont dans le sens souhaité pour les trois réponses : densité et flexion augmentent, porosité diminue.</p><p class=\"takeaway\">Retenir ces pistes pour une étude de confirmation. Le criblage ne donne pas encore un optimum validé.</p>",
+      "body": "<figure class=\"original-figure\"><img src=\"figures/INTRO_d86_image48.png\" alt=\"Effets totaux — flexion\"><figcaption>Effets totaux — flexion</figcaption></figure><p>Premier palier et pression vont dans le sens souhaité pour les trois réponses : densité et flexion augmentent, porosité diminue.</p><p class=\"takeaway\">Retenir ces pistes pour une étude de confirmation. Le criblage ne donne pas encore un optimum validé.</p>",
       "pages": [
         86
       ],
@@ -779,7 +779,7 @@ window.CoursData = {
     },
     {
       "chapter": "interpretation",
-      "title": "Conclure le cours 1 : une information adaptée à la décision",
+      "title": "Une information adaptée à la décision",
       "body": "<svg class=\"science-svg\" viewBox=\"0 0 1200 230\" role=\"img\" aria-label=\"Objectifs et domaine puis Essais organisés puis Poids et incertitude puis Confirmation\"><rect x=\"8\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"140\" y=\"120\" text-anchor=\"middle\">Objectifs et domaine</text><path d=\"M275 110h24l-8-7m8 7l-8 7\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\"/><rect x=\"308\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"440\" y=\"120\" text-anchor=\"middle\">Essais organisés</text><path d=\"M575 110h24l-8-7m8 7l-8 7\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\"/><rect x=\"608\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"740\" y=\"120\" text-anchor=\"middle\">Poids et incertitude</text><path d=\"M875 110h24l-8-7m8 7l-8 7\" fill=\"none\" stroke=\"#1f4e79\" stroke-width=\"3\"/><rect x=\"908\" y=\"60\" width=\"265\" height=\"100\" rx=\"6\" fill=\"#edf3f7\" stroke=\"#1f4e79\"/><text x=\"1040\" y=\"120\" text-anchor=\"middle\">Confirmation</text></svg><table class=\"annotated-matrix\"><thead><tr><th>À retenir</th><th>Limite à conserver</th></tr></thead><tbody><tr><td>Disposition des essais</td><td>Le budget et le bruit comptent aussi.</td></tr><tr><td>Poids et variance</td><td>Amplitude et significativité diffèrent.</td></tr><tr><td>Hadamard et parcimonie</td><td>Orthogonal ne signifie pas sans interaction.</td></tr><tr><td>Pareto et Henry</td><td>Diagnostics ; conclusions à confirmer.</td></tr></tbody></table>",
       "pages": [
         87
