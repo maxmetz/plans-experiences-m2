@@ -1,0 +1,25 @@
+
+  .worlds { display:grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .wA h3 { color: var(--s1); } .wB h3 { color: var(--s2); }
+  .vote { display:flex; gap: 28px; margin-top: 16px; }
+  .vote div { flex:1; border:3px solid var(--line); border-radius:14px; padding:18px 22px; font-size:28px; }
+  .vote b { display:block; font-size: 34px; color: var(--brand); }
+  .five td { font-size: 24px; text-align:left !important; }
+  .mini { font-size: 20px !important; }
+  .activity-mode { font-size:18px; color:var(--good); font-weight:650; margin:0 0 10px; }
+  .labo-cue { font-size:20px !important; background:var(--good-soft); padding:10px 14px; border-radius:8px; }
+  .labo-link { color:var(--brand); font-weight:700; text-decoration:underline; }
+  .slide .small li { font-size:24px; margin:10px 0; }
+  .slide .eq { font-size:31px; margin:12px 0; }
+  .slide .box { margin-top:12px; }
+  .slide .box p { margin:8px 0; }
+
+
+/* V3 : diapositives distinctes et visuels de projection. */
+.v3 h2{font-size:44px;margin-bottom:18px}.v3 .activity-mode{font-size:19px}.v3-body{flex:1;min-height:0}.v3-body p,.v3-lead{font-size:30px;line-height:1.4;margin:18px 0}.v3-columns,.science-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
+.takeaway{font-size:27px!important;line-height:1.35;padding:13px 0 13px 20px;border-left:6px solid #b5591b;margin:16px 0!important}.v3 .eq{font-size:36px;margin:20px 0}.v3-columns .eq{font-size:29px}.v3 .science-svg{width:100%;height:auto;max-height:435px;display:block}.science-svg text{font:25px 'Segoe UI',Arial,sans-serif;fill:#243e52}.science-svg text[fill]{fill:attr(fill)}
+.v3 figure{margin:0}.v3 figcaption{font-size:22px;color:#455e71;text-align:center;margin-top:8px}.annotated-matrix{border-collapse:separate;border-spacing:5px;margin:14px auto;font-size:34px;text-align:center;border-left:3px solid #344f65;border-right:3px solid #344f65;max-width:100%}.annotated-matrix th{font-size:23px;padding:8px 15px;color:#4d6475}.annotated-matrix td{padding:9px 20px;background:#eff4f7}.annotated-matrix .term-0{color:#5b3f8c}.annotated-matrix .term-1{color:#1f4e79}.annotated-matrix .term-2{color:#b5591b}.matrix-beta td{color:#5b3f8c!important}.matrix-y td{color:#2e6b3a!important}.select-two td:nth-child(-n+2),.select-temperature td:nth-child(2){background:#fff0c4}.identical td:nth-child(2),.identical td:nth-child(3){background:#fff0c4}.matrix-transpose tr:nth-child(2) td{background:#fff0c4;color:#1f4e79}.science-svg text[fill="#1f4e79"]{fill:#1f4e79}.science-svg text[fill="#b5591b"]{fill:#b5591b}.science-svg text[fill="#896640"]{fill:#896640}
+.equation-list{display:grid;gap:18px;margin:25px 0;font-size:38px}.equation-list>div{padding:18px 24px;background:#eff4f7;border-radius:6px}.equation-list span{display:inline-block;width:170px;color:#566a78;font-size:27px}.xtx-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.dot-cell{padding:16px 14px;background:#eff4f7;border-radius:6px}.dot-cell b{font-size:24px;color:#1f4e79}.dot-terms{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;font-size:21px;white-space:nowrap;margin:16px 0}.dot-cell strong{font-size:32px;color:#b5591b}.lab-actions{display:flex;gap:35px;margin:35px 0}.lab-actions a{font-size:32px;padding:18px 24px;border:2px solid #1f4e79;border-radius:6px;color:#1f4e79}.v3 .labo-cue{font-size:24px!important}.v3 .insight{border-left:5px solid #1f4e79;padding:12px 20px;margin:12px 0;background:#eff4f7;font-size:28px}.v3 .insight p{font-size:27px;margin:8px 0}.v3 .insight.limit{border-color:#b5591b;background:#fbefe6}.v3 .science-caption{font-size:24px}.v3 .step-label{display:none}
+#s1-reperes{position:fixed;bottom:5px;left:12px;z-index:15;font:14px 'Segoe UI',sans-serif;background:#fff;padding:4px 8px;border:1px solid #ccd8e1;border-radius:4px}#s1-reperes select{font:inherit;max-width:230px}.slide-foot{padding-left:330px}.legacy-label{color:#62717b;font-size:17px}
+body.print #s1-reperes,body.overview #s1-reperes{display:none}#s1-resources{position:fixed;top:8px;left:14px;z-index:15;font:14px 'Segoe UI',sans-serif;color:#526777}#s1-resources a{color:#1f4e79;margin:0 8px}body.print #s1-resources,body.overview #s1-resources{display:none}@media print{#s1-reperes,#s1-resources{display:none}.v3 .frag{opacity:1!important;transform:none!important;visibility:visible!important}.slide-foot{padding-left:0}}
+body.print #structured-switch{display:none}@media print{#structured-switch{display:none!important}}
